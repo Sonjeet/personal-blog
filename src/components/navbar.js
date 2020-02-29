@@ -14,12 +14,12 @@ const NavWrapper = styled.div`
     padding: 30px var(--horizontal-spacing);
     font-family: var(--font-sans-serif);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
 `;
 
-// TODO: 
-// props should specify if left or right content -> can do this w/ s.c-props
-// 
+// if prop.slot is 'left' then apply margin-right 
+// if prop.slot is 'right' then apply margin-left
 const NavContent = styled.div`
     > * {
         margin: ${props => props.slot === "left"

@@ -2,10 +2,16 @@ module.exports = {
   siteMetadata: {
     title: `Personal Blog`,
     author: `Sonjeet Paul`,
-    description: `Blog about my journey through software development, reading and business.`,
+    location: "Birmingham, UK",
+    description: `My name is Sonjeet and I write code for all ends of the tech stack. I
+          do a lot of independent learning and want to share my experiences
+          through my blog. If you’re interested in learning with me then stay
+          tuned as I share my thoughts,`,
     siteUrl: `https://github.com/Sonjeet/personal-blog.git`, // TODO: change to be the actual URL of deployed site instead of github repo
     social: {
       twitter: `sonj_98`,
+      github: "sonjeet",
+      linkedin: "sonjeet",
     },
   },
   plugins: [
@@ -30,6 +36,13 @@ module.exports = {
         name: `assets`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'fonts',
+        path: `${__dirname}/src/fonts/`
+      }
+    }
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

@@ -1,6 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* @font-face kit by Fonts2u (https://fonts2u.com) */ 
+@font-face {
+    font-family: "Connection Serif";
+    src: url("../fonts/ConnectionSerif.eot") format("eot"),
+        url("../fonts/ConnectionSerif.woff") format("woff"),
+        url("../fonts/ConnectionSerif.ttf") format("truetype"),
+        url("../fonts/ConnectionSerif.svg#ConnectionSerif") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
+    /* fonts */
     --font-serif: 'Lora';
     --font-sans-serif: 'Montserrat';
+    --font-pixel: 'Connection Serif';
+
     --blue-heading: #488ac5;
     --blue-text: #285C7F;
     --greyish-blue: #4d6c85;
@@ -21,5 +40,5 @@
     --rainbow-aqua: linear-gradient(rgb(25, 201, 255) 0%, rgb(0, 230, 210) 50%, rgb(14, 230, 183) 100%);
 
     /* spacing */
-    --horizontal-spacing: calc(100% / 12);
+    --horizontal-spacing: calc(100vw / 12);
 }
