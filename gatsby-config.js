@@ -1,12 +1,11 @@
 module.exports = {
   siteMetadata: {
-    // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Kyle Matthews`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Personal Blog`,
+    author: `Sonjeet Paul`,
+    description: `Blog about my journey through software development, reading and business.`,
+    siteUrl: `https://github.com/Sonjeet/personal-blog.git`, // TODO: change to be the actual URL of deployed site instead of github repo
     social: {
-      twitter: `kylemathews`,
+      twitter: `sonj_98`,
     },
   },
   plugins: [

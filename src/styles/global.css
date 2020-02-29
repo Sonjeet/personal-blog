@@ -1,0 +1,25 @@
+:root {
+    --font-serif: 'Lora';
+    --font-sans-serif: 'Montserrat';
+    --blue-heading: #488ac5;
+    --blue-text: #285C7F;
+    --greyish-blue: #4d6c85;
+    --green: #31a178;
+    --link: #006290;
+    --transparent-blue: rgba(228,238,245,.93);
+    --grey: #f1f4f6;
+    /* to be used when the background is --transparent-blue */
+    --border: #CCE2F3;
+    /* mostly to be used with headers */
+    --text-shadow: 1px 0 0 #1b5bb1, -4px -5px 0 rgba(0,133,255,.04);
+
+    /* gradients */
+    --rainbow-green: linear-gradient(rgb(255, 210, 0) 0%, rgb(110, 223, 0) 50%, rgb(0, 223, 187) 100%);
+    --rainbow-pink: linear-gradient(rgb(255, 143, 178) 0%, rgb(167, 151, 255) 50%, rgb(0, 229, 255) 100%);
+    --rainbow-cherry: linear-gradient(rgb(0, 95, 255) 0%, rgb(146, 0, 255) 50%, rgb(255, 46, 25) 100%);
+    --rainbow-orange: linear-gradient(rgb(255, 220, 45) 0%, rgb(255, 150, 22) 50%, rgb(255, 79, 0) 100%);
+    --rainbow-aqua: linear-gradient(rgb(25, 201, 255) 0%, rgb(0, 230, 210) 50%, rgb(14, 230, 183) 100%);
+
+    /* spacing */
+    --horizontal-spacing: calc(100% / 12);
+}
