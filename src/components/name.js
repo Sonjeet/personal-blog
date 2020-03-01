@@ -7,6 +7,7 @@ const NameWrapper = styled.h1`
     font-weight: 600;
 `;
 
+// TODO: Maybe just remove this component completely as we have header now
 // TODO: maybe use site info to get name but maybe not idk
 // its just overengineering at the end of the day
 const Name = () => <NameWrapper>Sonjeet Paul &#128075;</NameWrapper>

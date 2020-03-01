@@ -42,7 +42,7 @@ module.exports = {
         name: 'fonts',
         path: `${__dirname}/src/fonts/`
       }
-    }
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

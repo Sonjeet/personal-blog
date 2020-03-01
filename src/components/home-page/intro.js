@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import "../../utils/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Name from "../name";
 import { graphql, useStaticQuery } from "gatsby";
+
+import "../../utils/fontawesome";
+import Heading from "../heading";
 
 const IntroDetails = styled.div`
     color: var(--blue-heading);
     font-family: var(--font-sans-serif);
     font-size: 30px;
+    display: flex;
 
     > * {
         margin-right: 13px;
@@ -41,12 +43,19 @@ const Intro = () => {
 
     return (
       <>
-        <Name />
+        {/* <Name /> */}
+        <Heading margin="0 0 1.4rem 0" size={1} weight={600}>
+          {site.siteMetadata.author} <span role="img">&#128075;</span>
+        </Heading>
         <IntroDetails>
           <FontAwesomeIcon icon="map-marker-alt" color={blackColour} />
-          <span>{site.siteMetadata.location}</span>
+          <Heading margin="0 0 1.2rem 0" size={2} weight={500}>
+            {site.siteMetadata.location}
+          </Heading>
+
           {/* Pipe symbol */}
           <span>&#124;</span>
+
           <a
             target="_blank"
             href={`https://github.com/${site.siteMetadata.social.github}`}
@@ -67,12 +76,17 @@ const Intro = () => {
           </a>
         </IntroDetails>
 
-        <p style={{
-            fontFamily: 'var(--font-sans-serif)',
-            color: 'var(--blue-text)',
-            fontSize: '18px'
-        }}> {site.siteMetadata.description} <Pixelated>bit by bit</Pixelated> </p>
-        </>
+        <p
+          style={{
+            fontFamily: "var(--font-sans-serif)",
+            color: "var(--blue-text)",
+            fontSize: "18px",
+          }}
+        >
+          {" "}
+          {site.siteMetadata.description} <Pixelated>bit by bit</Pixelated>{" "}
+        </p>
+      </>
     )
 }
 
