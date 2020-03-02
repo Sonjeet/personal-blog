@@ -4,26 +4,26 @@ import styled from "styled-components";
 import Heading from "./heading";
 
 const CardWrapper = styled.div`
-  background-color: var(--transparent-blue);
-  border: 2px solid var(--light-border);
-  box-shadow: var(--box-shadow);
-  min-width: 100%;
-  max-width: 100%;
-  height: calc(2 * (100vh / 12));
-  margin-bottom: 20px;
-  padding: 1rem;
-  cursor: pointer;
-  transition: border-color 75ms ease, 
-    box-shadow 150ms ease, 
-    transform 0.2s ease,
-    background-color 125ms ease;
+    background-color: var(--transparent-blue);
+    border: 2px solid var(--light-border);
+    box-shadow: var(--box-shadow);
+    min-width: 100%;
+    max-width: 100%;
+    height: calc(2 * (100vh / 12));
+    margin-bottom: 20px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: border-color 75ms ease, 
+        box-shadow 150ms ease, 
+        transform 0.2s ease,
+        background-color 125ms ease;
 
-  &:hover {
-    transform: translateY(-4px);
-    border-color: var(--heavy-border);
-    background-color: var(--light-green);
-    box-shadow: var(--light-box-shadow);
-  }
+    &:hover {
+        transform: translateY(-4px);
+        border-color: var(--heavy-border);
+        background-color: var(--light-green);
+        box-shadow: var(--light-box-shadow);
+    }
 `;
 
 const Introduction = styled.p`

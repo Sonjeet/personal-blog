@@ -26,6 +26,22 @@ const RightColumn = styled.div`
   max-width: calc(4 * (100vw / 12));
 `;
 
+const SlantedBlock = styled.div`
+  z-index: -2;
+  transform: rotate(-2deg);
+  box-shadow: var(--box-shadow);
+  border-style: solid none none none;
+  border-color: var(--mild-blue);
+  border-width: 3px;
+  background-color: var(--grey);
+  min-width: 150vw;
+  min-height: 100vh;
+  max-height: 100vh;
+  position: absolute;
+  top: calc(var(--v-unit) * 5);
+  left: 0;
+`;
+
 const IndexPage = (props) => {
   const siteTitle = "Temp title"
 
@@ -43,6 +59,7 @@ const IndexPage = (props) => {
         <RightColumn>
           <RecentBlogs />
         </RightColumn>
+        <SlantedBlock/>
       </Wrapper>
     </Layout>
   )

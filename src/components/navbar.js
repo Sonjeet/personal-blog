@@ -28,15 +28,26 @@ const NavContent = styled.div`
     }
 `;
 
+const NavLink = styled(Link)`
+  text-decoration: none;
+  color: var(--link);
+  box-shadow: none;
+  transition: color 0.2s linear 0s;
+
+  &:hover {
+    color: var(--green);
+  }
+`
+
 const Nav = () => (
     <NavWrapper>
         <NavContent slot="left">
-            <Link to="/">Sonj.</Link>
+            <NavLink to="/">Sonj.</NavLink>
         </NavContent>
         <NavContent slot="right">
-            <Link to="/">Blog</Link>
-            <Link to="/">About</Link>
-            <Link to="/">Contact</Link>
+            <NavLink to="/blog">Blog</NavLink>
+            <NavLink to="/">About</NavLink>
+            <NavLink to="/">Contact</NavLink>
         </NavContent>
     </NavWrapper> 
 );

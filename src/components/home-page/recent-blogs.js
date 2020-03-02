@@ -11,19 +11,19 @@ const RecentBlogs = () => {
         title: "one of my blogs",
         date: new Date().toISOString(),
         intro:
-          "this is the start of a blog post. i developed it in gatsby etc. ",
+          "this is the start of a blog post. i developed it in gatsby etc. and this should become ellipsis",
       },
       {
         title: "one of my blogs",
         date: new Date().toISOString(),
         intro:
-          "this is the start of a blog post. i developed it in gatsby etc. ",
+          "this is the start of a blog post. i developed it in gatsby etc. and this should become ellipsis",
       },
       {
         title: "one of my blogs",
         date: new Date().toISOString(),
         intro:
-          "this is the start of a blog post. i developed it in gatsby etc. ",
+          "this is the start of a blog post. i developed it in gatsby etc. and this should become ellipsis",
       },
     ]
 

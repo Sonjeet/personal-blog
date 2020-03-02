@@ -1,13 +1,28 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 import Navbar from "../components/navbar";
 
-const Layout = (props) => {
-  const { children } = props;
+const GlobalStyle = createGlobalStyle`
+  html, body {
+    overflow-x: hidden;
 
+    ${'' /* during index page make sure overflow-y is hidden 
+      TODO: when viewport changes, make sure to change this dynamically
+    */}
+    overflow-y: ${props => props.pathname === '/'
+      ? 'hidden'
+      : 'none'};
+  }
+`;
+
+const Layout = (props) => {
+  const { children, location } = props;
+
+  console.log('props be ssdfsdnfunsdfunu: ', props)
   return (
     <Wrapper>
+      <GlobalStyle pathname={location.pathname} />
       <Navbar />
       <div
         style={{
@@ -24,6 +39,8 @@ const Layout = (props) => {
 
 const Wrapper = styled.div`
   min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
 `;
 
 export default Layout;

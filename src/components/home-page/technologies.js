@@ -9,6 +9,7 @@ import Img from 'gatsby-image';
 const Grid = styled.div`
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 `;
 
 const Technologies = () => {
@@ -17,7 +18,7 @@ const Technologies = () => {
             allImageSharp {
                 edges {
                     node {
-                        fluid(maxWidth: 150, maxHeight: 150) {
+                        fluid {
                             # THE GastsbyImageSharpFluid gets these items:
                             # src
                             # srcSet
