@@ -60,6 +60,7 @@ hr {
         12px 22px 28px -12px rgba(0, 64, 97, 0.01),
         0 32px 26px 3px hsla(0, 0%, 52.2%, 0.01),
         0 9px 7px -4px rgba(230, 238, 231, 0.27);
+    --text-shadow: 0px 5px 10px #00000014;
 
     /* gradients */
     --rainbow-green: linear-gradient(rgb(255, 210, 0) 0%, rgb(110, 223, 0) 50%, rgb(0, 223, 187) 100%);

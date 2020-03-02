@@ -34,13 +34,13 @@ const Introduction = styled.p`
     font-weight: 400;
 `;
 
-const Card = ({ title, date, intro }) => {
+const Card = ({ title, date, intro}) => {
     return(
         <>
             <CardWrapper>
                 <Heading
                     color="var(--blue-text)"
-                    margin="0 0 0.5rem 0" 
+                    margin="0 0 0.5rem 0"
                     size={3} 
                     weight={700}> {title} </Heading>
                 <Heading

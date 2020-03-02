@@ -13,6 +13,10 @@ module.exports = {
       github: "sonjeet",
       linkedin: "sonjeet",
     },
+    slogan: {
+      italics: "sharing my thoughts",
+      pixelated: "bit by bit"
+    }
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,

@@ -28,7 +28,7 @@ const RightColumn = styled.div`
 
 const SlantedBlock = styled.div`
   z-index: -2;
-  transform: rotate(-2deg);
+  transform: rotate(-0.8deg);
   box-shadow: var(--box-shadow);
   border-style: solid none none none;
   border-color: var(--mild-blue);
@@ -38,7 +38,7 @@ const SlantedBlock = styled.div`
   min-height: 100vh;
   max-height: 100vh;
   position: absolute;
-  top: calc(var(--v-unit) * 5);
+  top: calc(var(--v-unit) * 6);
   left: 0;
 `;
 

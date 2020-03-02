@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Heading from '../heading';
 import GridCell from './grid-cell';
-import Img from 'gatsby-image';
 
 const Grid = styled.div`
     display: flex;
@@ -19,7 +18,7 @@ const Technologies = () => {
                 edges {
                     node {
                         fluid {
-                            # THE GastsbyImageSharpFluid gets these items:
+                            # The GastsbyImageSharpFluid gets these items:
                             # src
                             # srcSet
                             # base64

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from "gatsby";
+
+import NavLink from "../components/nav-link";
 
 // style constants
 const marginLeft = '20px';
@@ -27,17 +28,6 @@ const NavContent = styled.div`
             : `0px 0px 0px ${marginLeft}` };
     }
 `;
-
-const NavLink = styled(Link)`
-  text-decoration: none;
-  color: var(--link);
-  box-shadow: none;
-  transition: color 0.2s linear 0s;
-
-  &:hover {
-    color: var(--green);
-  }
-`
 
 const Nav = () => (
     <NavWrapper>
