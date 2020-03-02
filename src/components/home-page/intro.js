@@ -22,6 +22,10 @@ const Pixelated = styled.span`
     font-weight: 900;
 `;
 
+const Wrapper = styled.div`
+  margin-bottom: calc(0.5 * (100vh / 12));
+`;
+
 const Intro = () => {
     const blackColour = "#222932";
     const { site } = useStaticQuery(graphql`
@@ -42,7 +46,7 @@ const Intro = () => {
     `);
 
     return (
-      <>
+      <Wrapper>
         {/* <Name /> */}
         <Heading margin="0 0 1.4rem 0" size={1} weight={600}>
           {site.siteMetadata.author} <span role="img">&#128075;</span>
@@ -86,7 +90,7 @@ const Intro = () => {
           {" "}
           {site.siteMetadata.description} <Pixelated>bit by bit</Pixelated>{" "}
         </p>
-      </>
+      </Wrapper>
     )
 }
 

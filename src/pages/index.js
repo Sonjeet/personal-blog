@@ -5,10 +5,11 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Intro from "../components/home-page/intro";
 import RecentBlogs from "../components/home-page/recent-blogs";
+import Technologies from "../components/home-page/technologies";
 
 const Wrapper = styled.div`
   display: flex;
-`
+`;
 
 // left column should take up 5/12 of the width
 // e.g. if we had 12 columns then left column should occupy 5 of those
@@ -37,12 +38,10 @@ const IndexPage = (props) => {
         />
         <LeftColumn>
           <Intro />
+          <Technologies />
         </LeftColumn>
         <RightColumn>
           <RecentBlogs />
-          {/* <Link to="/blog/">
-            <Button marginTop="35px">Go to Blog</Button>
-          </Link> */}
         </RightColumn>
       </Wrapper>
     </Layout>

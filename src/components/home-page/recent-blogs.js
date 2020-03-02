@@ -43,7 +43,7 @@ const RecentBlogs = () => {
                     />
                 ))
             }
-            <Link style={{
+            <Link to="/blog" style={{
                 fontFamily: 'var(--font-sans-serif)',
                 color: 'var(--blue-text)',
                 fontWeight: 700,

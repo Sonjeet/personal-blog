@@ -15,10 +15,11 @@ figure,
 hr {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-/* Roboto font */
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+/* Noto sans */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 
 /* @font-face kit by Fonts2u (https://fonts2u.com) */ 
 @font-face {
@@ -36,7 +37,7 @@ hr {
 
     /* fonts */
     --font-serif: 'Lora';
-    --font-sans-serif: 'Roboto';
+    --font-sans-serif: 'Noto Sans';
     --font-pixel: 'Connection Serif';
 
     --blue-heading: #488ac5;
@@ -68,4 +69,6 @@ hr {
 
     /* spacing */
     --horizontal-spacing: calc(100vw / 12);
+    --h-unit: calc(100vw / 12);
+    --v-unit: calc(100vh / 12);
 }

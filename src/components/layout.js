@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import Navbar from "../components/navbar";
-import { faCalculator } from "@fortawesome/free-solid-svg-icons";
 
 const Layout = (props) => {
   const { children } = props;
