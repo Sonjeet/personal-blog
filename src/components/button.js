@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Button = props => (
-  <ButtonWrapper props={props}>
+  <ButtonWrapper style={props.styles}>
     {props.children}
   </ButtonWrapper>
 )
@@ -29,6 +29,6 @@ const ButtonWrapper = styled.button`
     box-shadow: var(--light-box-shadow);
     transform: translateY(-2px);
   }
-`
+`;
 
 export default Button

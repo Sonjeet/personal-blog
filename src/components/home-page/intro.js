@@ -11,6 +11,7 @@ const IntroDetails = styled.div`
     font-family: var(--font-sans-serif);
     font-size: 30px;
     display: flex;
+    align-items: center;
 
     > * {
         margin-right: 13px;
@@ -57,7 +58,7 @@ const Intro = () => {
         }
       }
     `);
-
+    
     return (
       <Wrapper>
         {/* <Name /> */}

@@ -1,7 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
 
-import Navbar from "../components/navbar";
+import Particles from "./particles";
+import Navbar from "./navbar";
 
 // TODO: sleepy sonj made a silly, find an alternative when you're awake
 const youHonestlyNeedToFindABetterWayToDoThis = (pathname) => {
@@ -10,11 +11,21 @@ const youHonestlyNeedToFindABetterWayToDoThis = (pathname) => {
     : 'scroll';
 };
 
+const Wrapper = styled.div`
+  min-height: 100vh;
+  max-height: 100vh;
+`
+
+const Content = styled.main`
+  background-color: ${props => props.pathname.match(/blog\/[a-z]+?/) ? "white" : "transparent"}
+`;
+
 const Layout = (props) => {
   const { children, location } = props;
-
+  console.log(props)
   return (
     <Wrapper>
+      <Particles />
       <Navbar />
       {youHonestlyNeedToFindABetterWayToDoThis(location.pathname)}
       <div
@@ -24,15 +35,18 @@ const Layout = (props) => {
           marginTop: "var(--v-unit)",
         }}
       >
-        <main>{children}</main>
+        <main
+          style={{
+            backgroundColor: location.pathname.match(/blog\/[a-z]+?/)
+              ? "white"
+              : "transparent"
+          }}
+        >
+          {children}
+        </main>
       </div>
     </Wrapper>
   )
 }
-
-const Wrapper = styled.div`
-  min-height: 100vh;
-  max-height: 100vh;
-`;
 
 export default Layout;

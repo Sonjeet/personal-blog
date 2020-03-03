@@ -5,11 +5,10 @@ import { MDXProvider } from "@mdx-js/react";
 import styled from 'styled-components';
 import SEO from "../components/seo";
 
-import Bio from "../components/bio";
 import Layout from "../components/layout";
-import { rhythm, scale } from "../utils/typography";
 import BlogHeading from "../components/blog-heading";
 import Heading from "../components/heading";
+import NavLink from "../components/nav-link";
 
 const BlogPostWrapper = styled.div`
   max-width: 42rem;
@@ -18,10 +17,64 @@ const BlogPostWrapper = styled.div`
   margin-right: auto;
 `;
 
+const ButtonsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const HR = styled.hr`
+  border: 2px solid var(--tranparent-blue);
+  border-radius: 5px;
+  ${'' /* transform: rotate(-2deg); */}
+
+  &:nth-child(even) {
+    transform: rotate(-2deg);
+  }
+
+  &:nth-child(odd) {
+    transform: rotate(2deg);
+  }
+`
+
 const BlogPostTemplate = (props) => {
-  const post = props.data.mdx
-  const siteTitle = props.data.site.siteMetadata.title
-  const { previous, next } = props.pageContext
+  const post = props.data.mdx;
+  const siteTitle = props.data.site.siteMetadata.title;
+  const { previous, next } = props.pageContext;
+
+  const headingStyle = {
+    fontFamily: "var(--font-sans-serif)",
+    color: "var(--blue-heading)",
+    letterSpacing: "0.2rem"
+  };
+
+  const listStyle = {
+    marginLeft: "1rem",
+    fontSize: "0.8rem",
+    color: "var(--blue-text)",
+  };
+
+  const components = {
+    h1: props => <h1 {...props} style={headingStyle} />,
+    h2: props => <h2 {...props} style={headingStyle} />,
+    h3: props => <h3 {...props} style={headingStyle} />,
+    h4: props => <h4 {...props} style={headingStyle} />,
+    h5: props => <h5 {...props} style={headingStyle} />,
+    h6: props => <h6 {...props} style={headingStyle} />,
+    p: props => (
+      <p
+        {...props}
+        style={{
+          textAlign: "justify",
+          fontSize: "0.9rem",
+          color: "var(--blue-text)",
+        }}
+      />
+    ),
+    ul: props => <ul {...props} style={listStyle} />,
+    ol: props => <ol {...props} style={listStyle} />,
+    blockquote: props => <blockquote {...props} style={{ marginLeft: "1rem" }} />
+  };
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -31,118 +84,33 @@ const BlogPostTemplate = (props) => {
       />
       <BlogHeading />
       <BlogPostWrapper>
+        <HR />
         <Heading size={1} weight={900} margin="0 0 0.5rem 0">
           {post.frontmatter.title}
         </Heading>
         <Heading margin="0 0 2rem 0" size={4} weight={400}>
           {post.frontmatter.date}
         </Heading>
-        <MDXProvider
-          components={{
-            h1: props => (
-              <h1
-                {...props}
-                style={{
-                  fontFamily: "var(--font-sans-serif)",
-                  color: "var(--blue-text)",
-                }}
-              />
-            ),
-            h2: props => (
-              <h2
-                {...props}
-                style={{
-                  fontFamily: "var(--font-sans-serif)",
-                  color: "var(--blue-text)",
-                }}
-              />
-            ),
-            h3: props => (
-              <h3
-                {...props}
-                style={{
-                  fontFamily: "var(--font-sans-serif)",
-                  color: "var(--blue-text)",
-                }}
-              />
-            ),
-            h4: props => (
-              <h4
-                {...props}
-                style={{
-                  fontFamily: "var(--font-sans-serif)",
-                  color: "var(--blue-text)",
-                }}
-              />
-            ),
-            h5: props => (
-              <h5 {...props}
-                style={{
-                  fontFamily: "var(--font-sans-serif)",
-                  color: "var(--blue-text)",
-                }}
-              />
-            ),
-            h6: props => (
-              <h6
-                {...props}
-                style={{
-                  fontFamily: "var(--font-sans-serif)",
-                  color: "var(--blue-text)",
-                }}
-              />
-            ),
-            p: props => (
-              <p
-                {...props}
-                style={{
-                  textAlign: "justify",
-                  fontSize: "0.9rem",
-                  color: "var(--blue-text)",
-                }}
-              />
-            ),
-            ul: props => <ul {...props} style={{ marginLeft: "1rem", fontSize: "0.8rem", color: "var(--blue-text)" }} />,
-            ol: props => <ol {...props} style={{ marginLeft: "1rem", fontSize: "0.8rem", color: "var(--blue-text)" }} />,
-            blockquote: props => (
-              <blockquote {...props} style={{ marginLeft: "1rem" }} />
-            ),
-          }}
-        >
+        <HR />
+        <MDXProvider components={components}>
           <MDXRenderer>{post.body}</MDXRenderer>
         </MDXProvider>
-      </BlogPostWrapper>
-      {/* <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
-      <Bio />
-
-      <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
-          listStyle: `none`,
-          padding: 0,
-        }}
-      >
-        <li>
+        <HR />
+        <ButtonsWrapper>
           {previous && (
-            <Link to={`blog${previous.fields.slug}`} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
+            <NavLink left to={`/blog${previous.fields.slug}`}>
+            <span style={{marginRight: '0.2rem'}}>&larr;</span>
+              {previous.frontmatter.title}
+            </NavLink>
           )}
-        </li>
-        <li>
           {next && (
-            <Link to={`blog${next.fields.slug}`} rel="next">
-              {next.frontmatter.title} →
-            </Link>
+            <NavLink right to={`/blog${next.fields.slug}`}>
+              {next.frontmatter.title}
+              <span style={{marginLeft: '0.2rem'}}>&rarr;</span>
+            </NavLink>
           )}
-        </li>
-      </ul> */}
+        </ButtonsWrapper>
+      </BlogPostWrapper>
     </Layout>
   )
 }
