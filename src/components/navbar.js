@@ -36,8 +36,8 @@ const Nav = () => (
         </NavContent>
         <NavContent slot="right">
             <NavLink to="/blog">Blog</NavLink>
-            <NavLink to="/">About</NavLink>
-            <NavLink to="/">Contact</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
         </NavContent>
     </NavWrapper> 
 );

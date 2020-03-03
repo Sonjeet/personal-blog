@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { withTheme } from "styled-components";
+import styled from "styled-components";
 
 import Particles from "./particles";
 import Navbar from "./navbar";
@@ -14,10 +14,6 @@ const youHonestlyNeedToFindABetterWayToDoThis = (pathname) => {
 const Wrapper = styled.div`
   min-height: 100vh;
   max-height: 100vh;
-`
-
-const Content = styled.main`
-  background-color: ${props => props.pathname.match(/blog\/[a-z]+?/) ? "white" : "transparent"}
 `;
 
 const Layout = (props) => {

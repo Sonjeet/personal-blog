@@ -39,7 +39,7 @@ const RecentBlogs = () => {
                 margin="0 0 1.2rem 0"
                 size={2}
                 weight={500}
-                >Recent Blog Posts</Heading>
+                >Recent Blog Posts <span>&#128064;</span></Heading>
             {
                 posts.map(post => (
                     <Card

@@ -35,7 +35,7 @@ const Blog = (props) => {
   const posts = data.allMdx.edges;
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
       <SEO title="All posts" />
       <BlogHeading />
       <BlogsWrapper>

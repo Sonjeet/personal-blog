@@ -67,7 +67,7 @@ const Intro = () => {
         </Heading>
         <IntroDetails>
           <FontAwesomeIcon icon="map-marker-alt" color={blackColour} />
-          <Heading margin="0 0 1.2rem 0" size={2} weight={500}>
+          <Heading margin="0 0.2rem 0 0" size={2} weight={500}>
             {site.siteMetadata.location}
           </Heading>
 
