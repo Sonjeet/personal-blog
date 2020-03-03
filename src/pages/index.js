@@ -59,7 +59,7 @@ const IndexPage = (props) => {
         <RightColumn>
           <RecentBlogs />
         </RightColumn>
-        <SlantedBlock/>
+        {/* <SlantedBlock/> */}
       </Wrapper>
     </Layout>
   )

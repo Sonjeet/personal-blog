@@ -52,7 +52,7 @@ const Technologies = () => {
         </Heading>
         <Grid>
           {images.map(image => (
-            <GridCell fluid={image.node.fluid} />
+            <GridCell key={image.node.fluid.originalName} fluid={image.node.fluid} />
           ))}
         </Grid>
       </>

@@ -3,29 +3,9 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Heading from "../heading";
 import Card from "../card";
+import Button from "../button";
 
 const RecentBlogs = () => {
-    const dummy = [
-      {
-        title: "one of my blogs",
-        date: new Date().toISOString(),
-        intro:
-          "this is the start of a blog post. i developed it in gatsby etc. and this should become ellipsis",
-      },
-      {
-        title: "one of my blogs",
-        date: new Date().toISOString(),
-        intro:
-          "this is the start of a blog post. i developed it in gatsby etc. and this should become ellipsis",
-      },
-      {
-        title: "one of my blogs",
-        date: new Date().toISOString(),
-        intro:
-          "this is the start of a blog post. i developed it in gatsby etc. and this should become ellipsis",
-      },
-    ]
-
     const data = useStaticQuery(graphql`
         query {
             site {
@@ -64,6 +44,7 @@ const RecentBlogs = () => {
                 posts.map(post => (
                     <Card
                         key={post.node.fields.slug}
+                        slug={post.node.fields.slug}
                         title={post.node.frontmatter.title}
                         date={post.node.frontmatter.date}
                         intro={post.node.excerpt}
@@ -74,9 +55,9 @@ const RecentBlogs = () => {
                 fontFamily: 'var(--font-sans-serif)',
                 color: 'var(--blue-text)',
                 fontWeight: 700,
-                textDecoration: 'none',
+                boxShadow: 'none'
             }}>
-                Read More
+                <Button>Read More</Button>
             </Link>
         </>
     );

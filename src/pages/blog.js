@@ -22,26 +22,12 @@ const CardWrapper = styled.div`
   max-width: calc(50% - 10px);
 `;
 
-const dummy = [
-  {
-    title: "one of my blogs",
-    date: new Date().toISOString(),
-    intro:
-      "this is the start of a blog post. i developed it in gatsby etc. and this should become ellipsis",
-  },
-  {
-    title: "one of my blogs",
-    date: new Date().toISOString(),
-    intro:
-      "this is the start of a blog post. i developed it in gatsby etc. and this should become ellipsis",
-  },
-  {
-    title: "one of my blogs",
-    date: new Date().toISOString(),
-    intro:
-      "this is the start of a blog post. i developed it in gatsby etc. and this should become ellipsis",
-  },
-];
+const ButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: calc(var(--v-unit) / 2);
+`;
 
 const Blog = (props) => {
   const { data, location } = props;
@@ -53,9 +39,10 @@ const Blog = (props) => {
       <SEO title="All posts" />
       <BlogHeading />
       <BlogsWrapper>
-        {posts.map((post, i) => (
+        {posts.map(post => (
           <CardWrapper key={post.node.fields.slug}>
             <Card
+              slug={post.node.fields.slug}
               title={post.node.frontmatter.title}
               date={post.node.frontmatter.date}
               intro={post.node.excerpt}
@@ -63,9 +50,11 @@ const Blog = (props) => {
           </CardWrapper>
         ))}
       </BlogsWrapper>
-      <Link to="/">
-        <Button marginTop="85px">sonjjjj</Button>
-      </Link>
+      <ButtonWrapper>
+        <Link style={{boxShadow: 'none'}} to="/">
+          <Button marginTop="85px">Home</Button>
+        </Link>
+      </ButtonWrapper>
     </Layout>
   )
 }

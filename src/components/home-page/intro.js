@@ -26,6 +26,19 @@ const Wrapper = styled.div`
   margin-bottom: calc(0.5 * (100vh / 12));
 `;
 
+const LinkWrapper = styled.a`
+  box-shadow: none;
+  transition: all 0.2s linear 0s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+`;
+
+const NewTabLink = ({ children, url }) => (
+  <LinkWrapper href={url}>{children}</LinkWrapper>
+);
+
 const Intro = () => {
     const blackColour = "#222932";
     const { site } = useStaticQuery(graphql`
@@ -60,24 +73,21 @@ const Intro = () => {
           {/* Pipe symbol */}
           <span>&#124;</span>
 
-          <a
-            target="_blank"
-            href={`https://github.com/${site.siteMetadata.social.github}`}
+          <NewTabLink
+            url={`https://github.com/${site.siteMetadata.social.github}`}
           >
             <FontAwesomeIcon icon={["fab", "github"]} color={blackColour} />
-          </a>
-          <a
-            target="_blank"
-            href={`https://twitter.com/${site.siteMetadata.social.twitter}`}
+          </NewTabLink>
+          <NewTabLink
+            url={`https://twitter.com/${site.siteMetadata.social.twitter}`}
           >
             <FontAwesomeIcon icon={["fab", "twitter"]} color={blackColour} />
-          </a>
-          <a
-            target="_blank"
-            href={`https://www.linkedin.com/in/${site.siteMetadata.social.linkedin}`}
+          </NewTabLink>
+          <NewTabLink
+            url={`https://www.linkedin.com/in/${site.siteMetadata.social.linkedin}`}
           >
             <FontAwesomeIcon icon={["fab", "linkedin"]} color={blackColour} />
-          </a>
+          </NewTabLink>
         </IntroDetails>
 
         <p

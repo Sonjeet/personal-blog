@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 import Heading from "./heading";
 
@@ -34,9 +35,9 @@ const Introduction = styled.p`
     font-weight: 400;
 `;
 
-const Card = ({ title, date, intro}) => {
+const Card = ({ title, date, intro, slug}) => {
     return(
-        <>
+        <Link to={`blog${slug}`}>
             <CardWrapper>
                 <Heading
                     color="var(--blue-text)"
@@ -49,7 +50,7 @@ const Card = ({ title, date, intro}) => {
                     weight={400}> {date} </Heading>
                 <Introduction> {intro} </Introduction>
             </CardWrapper>
-        </>
+        </Link>
     );
 };
 

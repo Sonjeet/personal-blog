@@ -58,7 +58,7 @@ const BlogHeading = () => {
     return (
       <Wrapper>
         <HeadingLink to="/">
-            <Heading margin="0 0 1rem 0" size={1} weight={600}>
+            <Heading margin="0 0 1rem 0" size={1} weight={700}>
                 {site.siteMetadata.author}
             </Heading>
         </HeadingLink>
