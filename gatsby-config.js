@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Personal Blog`,
+    title: `Dev Blog`,
     author: `Sonjeet Paul`,
     location: "Birmingham, UK",
     description: `My name is Sonjeet and I write code for all ends of the tech stack. I
@@ -100,7 +100,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/code-icon.png`,
       },
     },
     {

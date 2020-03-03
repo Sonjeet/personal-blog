@@ -60,7 +60,7 @@ const IndexPage = (props) => {
     <Layout location={props.location}>
       <Wrapper>
         <SEO
-          title="Home"
+          title="Sonj"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <LeftColumn>
