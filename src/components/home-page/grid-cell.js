@@ -44,7 +44,7 @@ const CellWrapper = styled.div`
         max-width: calc((var(--h-unit) * 3) - 5px);
         max-height: calc((var(--h-unit) * 3) - 5px);
         min-height: calc((var(--h-unit) * 3) - 5px);
-        margin-bottom: 0.2rem;
+        margin-bottom: 1rem;
     }
 `; 
 

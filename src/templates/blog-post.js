@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react";
 import styled from 'styled-components';
@@ -9,6 +9,7 @@ import Layout from "../components/layout";
 import BlogHeading from "../components/blog-heading";
 import Heading from "../components/heading";
 import NavLink from "../components/nav-link";
+import HR from "../components/hr";
 
 const BlogPostWrapper = styled.div`
   max-width: 42rem;
@@ -21,21 +22,13 @@ const ButtonsWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 700px) {
+    * {
+      font-size: 0.7rem;
+    }
+  }
 `;
-
-const HR = styled.hr`
-  border: 2px solid var(--tranparent-blue);
-  border-radius: 5px;
-  ${'' /* transform: rotate(-2deg); */}
-
-  &:nth-child(even) {
-    transform: rotate(-2deg);
-  }
-
-  &:nth-child(odd) {
-    transform: rotate(2deg);
-  }
-`
 
 const BlogPostTemplate = (props) => {
   const post = props.data.mdx;
@@ -99,7 +92,7 @@ const BlogPostTemplate = (props) => {
         <ButtonsWrapper>
           {previous && (
             <NavLink left to={`/blog${previous.fields.slug}`}>
-            <span style={{marginRight: '0.2rem'}}>&larr;</span>
+              <span style={{marginRight: '0.2rem'}}>&larr;</span>
               {previous.frontmatter.title}
             </NavLink>
           )}

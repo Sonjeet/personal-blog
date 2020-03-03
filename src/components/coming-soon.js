@@ -47,7 +47,7 @@ const ComingSoon = ({ page }) => (
           <span role="img">&#128525;</span>
         </li>
         <li>
-          Developing another project (1 individual & 1 collaborative project
+          Working on other projects (1 individual & 1 collaborative project
           pending) <span role="img">&#128579;</span>
         </li>
         <li>
