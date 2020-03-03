@@ -1,34 +1,27 @@
 import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 import Navbar from "../components/navbar";
 
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    overflow-x: hidden;
-
-    ${'' /* during index page make sure overflow-y is hidden 
-      TODO: when viewport changes, make sure to change this dynamically
-    */}
-    overflow-y: ${props => props.pathname === '/'
-      ? 'hidden'
-      : 'none'};
-  }
-`;
+// TODO: sleepy sonj made a silly, find an alternative when you're awake
+const youHonestlyNeedToFindABetterWayToDoThis = (pathname) => {
+  document.getElementsByTagName('html')[0].style['overflow-y'] = pathname === '/'
+    ? 'hidden'
+    : 'scroll';
+};
 
 const Layout = (props) => {
   const { children, location } = props;
 
-  console.log('props be ssdfsdnfunsdfunu: ', props)
   return (
     <Wrapper>
-      <GlobalStyle pathname={location.pathname} />
       <Navbar />
+      {youHonestlyNeedToFindABetterWayToDoThis(location.pathname)}
       <div
         style={{
-          marginLeft: 'var(--horizontal-spacing)',
-          marginRight: 'var(--horizontal-spacing)',
-          marginTop: 'calc(100vh / 12)'
+          marginLeft: "var(--horizontal-spacing)",
+          marginRight: "var(--horizontal-spacing)",
+          marginTop: "var(--v-unit)",
         }}
       >
         <main>{children}</main>
@@ -40,7 +33,6 @@ const Layout = (props) => {
 const Wrapper = styled.div`
   min-height: 100vh;
   max-height: 100vh;
-  overflow: hidden;
 `;
 
 export default Layout;
