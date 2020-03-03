@@ -6,9 +6,11 @@ import Navbar from "./navbar";
 
 // TODO: sleepy sonj made a silly, find an alternative when you're awake
 const youHonestlyNeedToFindABetterWayToDoThis = (pathname) => {
-  document.getElementsByTagName('html')[0].style['overflow-y'] = pathname === '/'
-    ? 'hidden'
-    : 'scroll';
+  if(typeof window !== 'undefined') {
+    document.getElementsByTagName('html')[0].style['overflow-y'] = pathname === '/'
+      ? 'hidden'
+      : 'scroll';
+  }
 };
 
 const Wrapper = styled.div`
