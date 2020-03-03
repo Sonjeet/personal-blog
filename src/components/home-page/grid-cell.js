@@ -6,7 +6,9 @@ const CellWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
     min-width: calc(var(--h-unit) - 5px);
     max-width: calc(var(--h-unit) - 5px);
     max-height: calc(var(--h-unit) - 5px);
@@ -28,6 +30,21 @@ const CellWrapper = styled.div`
         transform: scale(1.3);
         background-color: var(--light-green);
         border-color: var(--heavy-border);
+    }
+
+    @media(max-width: 1050px) {
+        min-width: calc((var(--h-unit) * 2) - 5px);
+        max-width: calc((var(--h-unit) * 2) - 5px);
+        max-height: calc((var(--h-unit) * 2) - 5px);
+        min-height: calc((var(--h-unit) * 2) - 5px);
+    }
+
+    @media(max-width: 700px) {
+        min-width: calc((var(--h-unit) * 3) - 5px);
+        max-width: calc((var(--h-unit) * 3) - 5px);
+        max-height: calc((var(--h-unit) * 3) - 5px);
+        min-height: calc((var(--h-unit) * 3) - 5px);
+        margin-bottom: 0.2rem;
     }
 `; 
 

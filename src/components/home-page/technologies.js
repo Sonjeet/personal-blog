@@ -8,7 +8,38 @@ import GridCell from './grid-cell';
 const Grid = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    
+    @media(max-width: 1050px) {
+        padding: 0 calc(var(--h-unit) * 2);
+    }
+
+    @media(max-width: 700px) {
+        padding: 0 var(--h-unit);
+    }
+
+    @media(max-width: 540px) {
+        padding: 0 calc(var(--h-unit) / 2);
+    }
+`;
+
+const Wrapper = styled.div`
+    margin-bottom: 2rem;
+
+    @media(max-width: 1050px) {
+        text-align: center;
+    }
+
+    @media(max-width: 700px) {
+        h2 {
+            font-size: 1.8em;
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2 {
+            font-size: 1.2em;
+        }
+    }
 `;
 
 const Technologies = () => {
@@ -46,7 +77,7 @@ const Technologies = () => {
     const images = allImages.filter(image => fileNames.includes(image.node.fluid.originalName));
 
     return (
-      <>
+      <Wrapper>
         <Heading margin="0 0 1.2rem 0" size={2} weight={500}>
           Technologies I <strike>use</strike> <span role="img">&#x1F49A;</span>
         </Heading>
@@ -55,7 +86,7 @@ const Technologies = () => {
             <GridCell key={image.node.fluid.originalName} fluid={image.node.fluid} />
           ))}
         </Grid>
-      </>
+      </Wrapper>
     )
 }
 

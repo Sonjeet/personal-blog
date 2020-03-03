@@ -9,14 +9,29 @@ import Technologies from "../components/home-page/technologies";
 
 const Wrapper = styled.div`
   display: flex;
+
+  @media (max-width: 1050px) {
+    flex-direction: column;
+  }
 `;
 
 // left column should take up 5/12 of the width
 // e.g. if we had 12 columns then left column should occupy 5 of those
 const LeftColumn = styled.div`
-  min-width: calc(5 * (100vw / 12));
-  max-width: calc(5 * (100vw / 12));
+  min-width: calc(5 * var(--h-unit));
+  max-width: calc(5 * var(--h-unit));
   margin-right: var(--horizontal-spacing);
+
+  @media (max-width: 1050px) {
+    max-width: 100%;
+    margin-right: 0;
+    padding: 0 2.5rem;
+    text-align: center;
+  }
+
+  @media (max-width: 500px) {
+    padding: 0 1rem;
+  }
 `;
 
 // right column should take up 4/12 of the width
@@ -24,29 +39,25 @@ const LeftColumn = styled.div`
 const RightColumn = styled.div`
   min-width: calc(4 * (100vw / 12));
   max-width: calc(4 * (100vw / 12));
-`;
+  margin-bottom: 2rem;
 
-const SlantedBlock = styled.div`
-  z-index: -2;
-  transform: rotate(-0.8deg);
-  box-shadow: var(--box-shadow);
-  border-style: solid none none none;
-  border-color: var(--mild-blue);
-  border-width: 3px;
-  background-color: var(--grey);
-  min-width: 150vw;
-  min-height: 100vh;
-  max-height: 100vh;
-  position: absolute;
-  top: calc(var(--v-unit) * 6);
-  left: 0;
-`;
+  @media (max-width: 1050px) {
+    max-width: 100%;
+    padding: 0 2.5rem;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding: 0 1rem;
+  }
+`
 
 const IndexPage = (props) => {
-  const siteTitle = "Temp title"
-
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout location={props.location}>
       <Wrapper>
         <SEO
           title="Home"
@@ -59,7 +70,6 @@ const IndexPage = (props) => {
         <RightColumn>
           <RecentBlogs />
         </RightColumn>
-        {/* <SlantedBlock/> */}
       </Wrapper>
     </Layout>
   )

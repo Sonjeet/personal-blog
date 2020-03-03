@@ -1,9 +1,24 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import styled from 'styled-components';
 
 import Heading from "../heading";
 import Card from "../card";
 import Button from "../button";
+
+const Wrapper = styled.div`
+    @media(max-width: 700px) {
+        h2 {
+            font-size: 1.8em;
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2 {
+            font-size: 1.2em;
+        }
+    }
+`;
 
 const RecentBlogs = () => {
     const data = useStaticQuery(graphql`
@@ -34,7 +49,7 @@ const RecentBlogs = () => {
     const posts = data.allMdx.edges.slice(0, 3);
 
     return (
-        <>
+        <Wrapper>
             <Heading
                 margin="0 0 1.2rem 0"
                 size={2}
@@ -59,7 +74,7 @@ const RecentBlogs = () => {
             }}>
                 <Button>Read More</Button>
             </Link>
-        </>
+        </Wrapper>
     );
 };
 

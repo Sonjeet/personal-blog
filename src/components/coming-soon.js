@@ -14,6 +14,7 @@ const ComingSoon = ({ page }) => (
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
+        fontFamily: "var(--font-sans-serif"
       }}
     >
       <h1

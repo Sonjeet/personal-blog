@@ -14,13 +14,21 @@ const BlogsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 2rem auto 0 auto;
+  margin: 3rem auto 0 auto;
+
+  @media(max-width: 1200px) {
+    flex-direction: column;
+  }
 `;
 
 const CardWrapper = styled.div`
-  min-width: calc(50% - 10px);
   max-width: calc(50% - 10px);
-`;
+
+  @media (max-width: 1200px) {
+    min-width: 100%;
+    max-width: 100%;
+  }
+`
 
 const ButtonWrapper = styled.div`
   width: 100%;
@@ -31,7 +39,6 @@ const ButtonWrapper = styled.div`
 
 const Blog = (props) => {
   const { data, location } = props;
-  const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMdx.edges;
 
   return (

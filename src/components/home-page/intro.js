@@ -9,13 +9,50 @@ import Heading from "../heading";
 const IntroDetails = styled.div`
     color: var(--blue-heading);
     font-family: var(--font-sans-serif);
-    font-size: 30px;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
 
-    > * {
-        margin-right: 13px;
+    @media (max-width: 1050px) {
+      justify-content: center;
     }
+
+    @media(max-width: 1107px) {
+      * {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media(max-width: 640px) {
+      * {
+        font-size: 1rem;
+      }
+    }
+
+    @media(max-width: 488px) {
+      flex-direction: column;
+    }
+`;
+
+const P = styled.p`
+  font-family: var(--font-sans-serif);
+  color: var(--blue-text);
+  font-size: 1rem;
+
+  @media(max-width: 1050px) {
+    padding: 0 2rem;
+  }
+
+  @media(max-width: 640px) {
+    font-size: 0.8rem;
+    padding: 0 1.5rem;
+  }
+
+  @media(max-width: 500px) {
+    padding: 0;
+    font-size: 0.7rem;
+  }
 `;
 
 const Pixelated = styled.span`
@@ -25,19 +62,58 @@ const Pixelated = styled.span`
 
 const Wrapper = styled.div`
   margin-bottom: calc(0.5 * (100vh / 12));
-`;
+
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 1.4em;
+    }
+  }
+`
 
 const LinkWrapper = styled.a`
   box-shadow: none;
   transition: all 0.2s linear 0s;
+  font-size: 1rem;
 
   &:hover {
     transform: translateY(-2px);
   }
 `;
 
+const Location = styled.span`
+  display: flex;
+  align-items: center;
+  svg {
+    margin: 0 0.2rem 0 0;
+  }
+
+  &::after {
+    content: " | ";
+  }
+
+  @media (max-width: 488px) {
+    padding-bottom: 10px;
+    &::after {
+      content: "";
+    }
+  }
+`
+
+const SocialMedia = styled.span`
+  display: flex;
+  * {
+    margin: 0 5px;
+  }
+`;
+
 const NewTabLink = ({ children, url }) => (
-  <LinkWrapper href={url}>{children}</LinkWrapper>
+  <LinkWrapper style={{display: 'flex', alignItems: 'center'}} href={url}>{children}</LinkWrapper>
 );
 
 const Intro = () => {
@@ -61,50 +137,41 @@ const Intro = () => {
     
     return (
       <Wrapper>
-        {/* <Name /> */}
         <Heading margin="0 0 1.4rem 0" size={1} weight={600}>
           {site.siteMetadata.author} <span role="img">&#128075;</span>
         </Heading>
         <IntroDetails>
-          <FontAwesomeIcon icon="map-marker-alt" color={blackColour} />
-          <Heading margin="0 0.2rem 0 0" size={2} weight={500}>
-            {site.siteMetadata.location}
-          </Heading>
-
-          {/* Pipe symbol */}
-          <span>&#124;</span>
-
-          <NewTabLink
-            url={`https://github.com/${site.siteMetadata.social.github}`}
-          >
-            <FontAwesomeIcon icon={["fab", "github"]} color={blackColour} />
-          </NewTabLink>
-          <NewTabLink
-            url={`https://twitter.com/${site.siteMetadata.social.twitter}`}
-          >
-            <FontAwesomeIcon icon={["fab", "twitter"]} color={blackColour} />
-          </NewTabLink>
-          <NewTabLink
-            url={`https://www.linkedin.com/in/${site.siteMetadata.social.linkedin}`}
-          >
-            <FontAwesomeIcon icon={["fab", "linkedin"]} color={blackColour} />
-          </NewTabLink>
+          <Location>
+            <FontAwesomeIcon icon="map-marker-alt" color={blackColour} />
+            <Heading margin="0 0.2rem 0 0" size={2} weight={500}>
+              {site.siteMetadata.location}
+            </Heading>
+          </Location>
+          <SocialMedia>
+            <NewTabLink
+              url={`https://github.com/${site.siteMetadata.social.github}`}
+            >
+              <FontAwesomeIcon icon={["fab", "github"]} color={blackColour} />
+            </NewTabLink>
+            <NewTabLink
+              url={`https://twitter.com/${site.siteMetadata.social.twitter}`}
+            >
+              <FontAwesomeIcon icon={["fab", "twitter"]} color={blackColour} />
+            </NewTabLink>
+            <NewTabLink
+              url={`https://www.linkedin.com/in/${site.siteMetadata.social.linkedin}`}
+            >
+              <FontAwesomeIcon icon={["fab", "linkedin"]} color={blackColour} />
+            </NewTabLink>
+          </SocialMedia>
         </IntroDetails>
 
-        <p
-          style={{
-            fontFamily: "var(--font-sans-serif)",
-            color: "var(--blue-text)",
-            fontSize: "18px",
-          }}
-        >
+        <P>
           {" "}
           {site.siteMetadata.description} <Pixelated>bit by bit</Pixelated>{" "}
-        </p>
+        </P>
       </Wrapper>
     )
 }
-
-
 
 export default Intro

@@ -7,7 +7,7 @@ import Navbar from "./navbar";
 // TODO: sleepy sonj made a silly, find an alternative when you're awake
 const youHonestlyNeedToFindABetterWayToDoThis = (pathname) => {
   if(typeof window !== 'undefined') {
-    document.getElementsByTagName('html')[0].style['overflow-y'] = pathname === '/'
+    document.getElementsByTagName('html')[0].style['overflow-y'] = (pathname === '/' && window.innerWidth > 1050)
       ? 'hidden'
       : 'scroll';
   }
@@ -20,7 +20,6 @@ const Wrapper = styled.div`
 
 const Layout = (props) => {
   const { children, location } = props;
-  console.log(props)
   return (
     <Wrapper>
       <Particles />
@@ -30,7 +29,7 @@ const Layout = (props) => {
         style={{
           marginLeft: "var(--horizontal-spacing)",
           marginRight: "var(--horizontal-spacing)",
-          marginTop: "var(--v-unit)",
+          marginTop: "2.5rem",
         }}
       >
         <main

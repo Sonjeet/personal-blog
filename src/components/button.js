@@ -29,6 +29,10 @@ const ButtonWrapper = styled.button`
     box-shadow: var(--light-box-shadow);
     transform: translateY(-2px);
   }
+
+  @media(max-width: 700px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export default Button
