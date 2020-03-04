@@ -25,9 +25,7 @@ Blogging platforms like [medium](https://medium.com/) and [dev.to](https://dev.t
 ## How did you make this
 
 - Developed in Gatsby
-
 - CMS from Netlify CMS
-
 - Served by Netlify
 
 Learn more by following the Gatsby [tutorial](https://www.gatsbyjs.org/tutorial/blog-netlify-cms-tutorial/) to create a blog or have a look at my [source code](https://github.com/Sonjeet/personal-blog). I haven't completed everything I wanted for this site yet, ideally I'd like to add a section for readers to post comments amongst other small features too.
