@@ -38,7 +38,7 @@ const Layout = (props) => {
     <Wrapper>
       <Particles />
       <Navbar />
-      {youHonestlyNeedToFindABetterWayToDoThis(location.pathname)}
+      {/* {youHonestlyNeedToFindABetterWayToDoThis(location.pathname)} */}
       <ContentContainer>
         <main
           style={{
