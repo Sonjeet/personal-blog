@@ -15,8 +15,8 @@ module.exports = {
     },
     slogan: {
       italics: "sharing my thoughts",
-      pixelated: "bit by bit"
-    }
+      pixelated: "bit by bit",
+    },
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
@@ -27,11 +27,11 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/images`,
-        name: 'images'
-      }
+        name: "images",
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -50,9 +50,9 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'fonts',
-        path: `${__dirname}/src/fonts/`
-      }
+        name: "fonts",
+        path: `${__dirname}/src/fonts/`,
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
@@ -93,11 +93,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Sonj | Dev Blog`,
+        short_name: `Sonj`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#31a178`,
         display: `minimal-ui`,
         // edit below
         icon: `content/assets/code-icon.png`,
