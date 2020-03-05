@@ -13,7 +13,6 @@ const styles = {
 };
 
 const P = () => {
-    console.log('config', config)
     return <Particles style={styles} params={config} />
 };
 
