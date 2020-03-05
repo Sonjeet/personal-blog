@@ -58,7 +58,6 @@ const BlogPostTemplate = (props) => {
       <p
         {...props}
         style={{
-          textAlign: "justify",
           fontSize: "0.9rem",
           color: "var(--blue-text)",
         }}
