@@ -17,6 +17,10 @@ const NavWrapper = styled.div`
     text-decoration: none;
     font-weight: 800;
     text-rendering: optimizeLegibility;
+
+    @media(max-width: 500px) {
+        font-size: 0.8rem;
+    }
 `;
 
 // if prop.slot is 'left' then apply margin-right 

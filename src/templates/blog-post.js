@@ -66,7 +66,9 @@ const BlogPostTemplate = (props) => {
     ),
     ul: props => <ul {...props} style={listStyle} />,
     ol: props => <ol {...props} style={listStyle} />,
-    blockquote: props => <blockquote {...props} style={{ marginLeft: "1rem" }} />
+    blockquote: props => (
+      <blockquote {...props} style={{ marginLeft: "1rem" }} />
+    ),
   };
 
   return (

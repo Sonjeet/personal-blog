@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 import Particles from "./particles";
 import Navbar from "./navbar";
-import Footer from "./footer";
 
 // TODO: sleepy sonj made a silly, find an alternative when you're awake
 const youHonestlyNeedToFindABetterWayToDoThis = (pathname) => {
@@ -19,6 +18,20 @@ const Wrapper = styled.div`
   padding-bottom: 3rem;
 `;
 
+const ContentContainer = styled.div`
+  margin: 2.5rem var(--horizontal-spacing) 0 var(--horizontal-spacing);
+
+  @media (max-width: 700px) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 500px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+`;
+
 const Layout = (props) => {
   const { children, location } = props;
   return (
@@ -26,13 +39,7 @@ const Layout = (props) => {
       <Particles />
       <Navbar />
       {youHonestlyNeedToFindABetterWayToDoThis(location.pathname)}
-      <div
-        style={{
-          marginLeft: "var(--horizontal-spacing)",
-          marginRight: "var(--horizontal-spacing)",
-          marginTop: "2.5rem",
-        }}
-      >
+      <ContentContainer>
         <main
           style={{
             backgroundColor: location.pathname.match(/blog\/[a-z]+?/)
@@ -42,7 +49,7 @@ const Layout = (props) => {
         >
           {children}
         </main>
-      </div>
+      </ContentContainer>
     </Wrapper>
   )
 }
