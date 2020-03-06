@@ -1,7 +1,7 @@
 ---
 title: My imposter syndrome
 date: "2020-03-04"
-description: "My worst case of imposter syndrom"
+description: "My worst case of imposter syndrome"
 ---
 
 ## What is imposter syndrome?
