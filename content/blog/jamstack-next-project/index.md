@@ -72,8 +72,7 @@ JAMStack sites are built with version control in mind, this means that your whol
 
 ### Develop
 
-- Write all your code in one version control system. This allows you to view `diff` histories of files and collaborate with others more easily. 
-- You can also leverage webhooks in order to build your app again after some new code is pushed up.
+- Write all your code in one version control system. This allows you to view `diff` histories of files and collaborate with others more easily. You can also leverage webhooks in order to build your app again after some new code is pushed up.
 
 ### Build Process
 
