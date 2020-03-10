@@ -1,7 +1,8 @@
-# JAMStack for your next project?
-
-Complete: Yes
-Pending: Yes
+---
+title: JAMStack for your next project?
+date: "2020-03-08"
+description: "An insight into developing with the JAMStack"
+---
 
 ## JAMWhat?
 
