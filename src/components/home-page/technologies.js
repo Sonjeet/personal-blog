@@ -79,7 +79,7 @@ const Technologies = () => {
     return (
       <Wrapper>
         <Heading margin="0 0 1.2rem 0" size={2} weight={500}>
-          Technologies I <strike>use</strike> <span role="img">&#x1F49A;</span>
+          Technologies I <strike>use</strike> <span role="img" aria-label="heart">&#x1F49A;</span>
         </Heading>
         <Grid>
           {images.map(image => (

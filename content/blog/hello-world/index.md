@@ -1,7 +1,7 @@
 ---
 title: Hello World!
 date: "2020-02-19"
-description: "My first blog: Why did I make one."
+description: "Welcome to this part of the internet 😁"
 ---
 
 ## Why start a blog

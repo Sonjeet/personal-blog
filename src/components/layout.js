@@ -4,15 +4,6 @@ import styled from "styled-components";
 import Particles from "./particles";
 import Navbar from "./navbar";
 
-// TODO: sleepy sonj made a silly, find an alternative when you're awake
-const youHonestlyNeedToFindABetterWayToDoThis = (pathname) => {
-  if(typeof window !== 'undefined') {
-    document.getElementsByTagName('html')[0].style['overflow-y'] = (pathname === '/' && window.innerWidth > 1050)
-      ? 'hidden'
-      : 'scroll';
-  }
-};
-
 const Wrapper = styled.div`
   min-height: 100vh;
   padding-bottom: 3rem;

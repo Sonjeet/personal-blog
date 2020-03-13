@@ -48,12 +48,12 @@ const BlogPostTemplate = (props) => {
   };
 
   const components = {
-    h1: props => <h1 {...props} style={headingStyle} />,
-    h2: props => <h2 {...props} style={headingStyle} />,
-    h3: props => <h3 {...props} style={headingStyle} />,
-    h4: props => <h4 {...props} style={headingStyle} />,
-    h5: props => <h5 {...props} style={headingStyle} />,
-    h6: props => <h6 {...props} style={headingStyle} />,
+    h1: props => <h1 {...props} style={headingStyle}>{props.children}</h1>,
+    h2: props => <h2 {...props} style={headingStyle}>{props.children}</h2>,
+    h3: props => <h3 {...props} style={headingStyle}>{props.children}</h3>,
+    h4: props => <h4 {...props} style={headingStyle}>{props.children}</h4>,
+    h5: props => <h5 {...props} style={headingStyle}>{props.children}</h5>,
+    h6: props => <h6 {...props} style={headingStyle}>{props.children}</h6>,
     p: props => (
       <p
         {...props}

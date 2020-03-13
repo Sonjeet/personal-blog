@@ -44,14 +44,14 @@ const ComingSoon = ({ page }) => (
       >
         <li>
           Completing the last few months of uni{" "}
-          <span role="img">&#128525;</span>
+          <span role="img" aria-label="heart-eyes">&#128525;</span>
         </li>
         <li>
           Working on other projects (1 individual & 1 collaborative project
-          pending) <span role="img">&#128579;</span>
+          pending) <span role="img" aria-label="upside-down-smiley-face">&#128579;</span>
         </li>
         <li>
-          Sleeping. <span role="img">&#128564;</span>
+          Sleeping. <span role="img" aria-label="sleepy-face">&#128564;</span>
         </li>
       </ul>
     </div>

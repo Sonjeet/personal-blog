@@ -1,7 +1,7 @@
 ---
 title: A message to tool shamers.
 date: "2020-02-26"
-description: "I highlight some issues I have with tool shaming in software."
+description: "\"Ranting\" about tool shamers"
 ---
 
 ## What is tool shaming?

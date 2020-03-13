@@ -54,7 +54,7 @@ const RecentBlogs = () => {
                 margin="0 0 1.2rem 0"
                 size={2}
                 weight={500}
-                >Recent Blog Posts <span>&#128064;</span></Heading>
+                >Recent Blog Posts <span role="img" aria-label="eyes">&#128064;</span></Heading>
             {
                 posts.map(post => (
                     <Card
@@ -62,7 +62,7 @@ const RecentBlogs = () => {
                         slug={post.node.fields.slug}
                         title={post.node.frontmatter.title}
                         date={post.node.frontmatter.date}
-                        intro={post.node.excerpt}
+                        intro={post.node.frontmatter.description}
                     />
                 ))
             }

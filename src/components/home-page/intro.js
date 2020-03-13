@@ -138,7 +138,7 @@ const Intro = () => {
     return (
       <Wrapper>
         <Heading margin="0 0 1.4rem 0" size={1} weight={600}>
-          {site.siteMetadata.author} <span role="img">&#128075;</span>
+          {site.siteMetadata.author} <span role="img" aria-label="wave">&#128075;</span>
         </Heading>
         <IntroDetails>
           <Location>
