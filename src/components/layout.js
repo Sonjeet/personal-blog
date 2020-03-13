@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 import Particles from "./particles";
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 const Wrapper = styled.div`
   min-height: 100vh;
-  padding-bottom: 3rem;
 `;
 
 const ContentContainer = styled.div`
@@ -29,7 +29,6 @@ const Layout = (props) => {
     <Wrapper>
       <Particles />
       <Navbar />
-      {/* {youHonestlyNeedToFindABetterWayToDoThis(location.pathname)} */}
       <ContentContainer>
         <main
           style={{
@@ -41,6 +40,7 @@ const Layout = (props) => {
           {children}
         </main>
       </ContentContainer>
+      <Footer />
     </Wrapper>
   )
 }

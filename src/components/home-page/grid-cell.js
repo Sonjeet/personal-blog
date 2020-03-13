@@ -16,7 +16,6 @@ const CellWrapper = styled.div`
     background-color: var(--transparent-blue);
     border: 2px solid var(--light-border);
     box-shadow: var(--box-shadow);
-    cursor: pointer;
     transition: all 0.2s linear 0s;
 
     * {
