@@ -1,3 +1,9 @@
+// TODO: after dissertation finishes
+// .. replace social media content in this file w/ social-media.js
+// .. the only reason we haven't done it so far is because the content in this file is responsive
+// .. but the social-media.js component isn't responsive for this case
+// .. it's an easy fix, but dissertation stuff has gots 2 be done
+
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -105,7 +111,7 @@ const Location = styled.span`
   }
 `
 
-const SocialMedia = styled.span`
+const SocialMediaWrapper = styled.span`
   display: flex;
   * {
     margin: 0 5px;
@@ -119,7 +125,7 @@ const NewTabLink = ({ children, url }) => (
 const Intro = () => {
     const blackColour = "#222932";
     const { site } = useStaticQuery(graphql`
-      query MyQuery {
+      query {
         site {
           siteMetadata {
             author
@@ -138,7 +144,10 @@ const Intro = () => {
     return (
       <Wrapper>
         <Heading margin="0 0 1.4rem 0" size={1} weight={600}>
-          {site.siteMetadata.author} <span role="img" aria-label="wave">&#128075;</span>
+          {site.siteMetadata.author}{" "}
+          <span role="img" aria-label="wave">
+            &#128075;
+          </span>
         </Heading>
         <IntroDetails>
           <Location>
@@ -147,7 +156,7 @@ const Intro = () => {
               {site.siteMetadata.location}
             </Heading>
           </Location>
-          <SocialMedia>
+          <SocialMediaWrapper>
             <NewTabLink
               url={`https://github.com/${site.siteMetadata.social.github}`}
             >
@@ -163,7 +172,7 @@ const Intro = () => {
             >
               <FontAwesomeIcon icon={["fab", "linkedin"]} color={blackColour} />
             </NewTabLink>
-          </SocialMedia>
+          </SocialMediaWrapper>
         </IntroDetails>
 
         <P>
@@ -174,4 +183,6 @@ const Intro = () => {
     )
 }
 
-export default Intro
+export { NewTabLink };
+
+export default Intro;
