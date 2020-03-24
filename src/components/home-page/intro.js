@@ -119,7 +119,7 @@ const SocialMediaWrapper = styled.span`
 `;
 
 const NewTabLink = ({ children, url }) => (
-  <LinkWrapper style={{display: 'flex', alignItems: 'center'}} href={url}>{children}</LinkWrapper>
+  <LinkWrapper style={{display: 'flex', alignItems: 'center'}} href={url} target="_blank">{children}</LinkWrapper>
 );
 
 const Intro = () => {
@@ -135,12 +135,15 @@ const Intro = () => {
               github
               linkedin
               twitter
+              youtube
             }
           }
         }
       }
     `);
-    
+    console.log(
+      `CHANNEL NAME: https://www.youtube.com/channel/${site.siteMetadata.social.youtube}`
+    )
     return (
       <Wrapper>
         <Heading margin="0 0 1.4rem 0" size={1} weight={600}>
@@ -163,9 +166,9 @@ const Intro = () => {
               <FontAwesomeIcon icon={["fab", "github"]} color={blackColour} />
             </NewTabLink>
             <NewTabLink
-              url={`https://twitter.com/${site.siteMetadata.social.twitter}`}
+              url={`https://www.youtube.com/channel/${site.siteMetadata.social.youtube}`}
             >
-              <FontAwesomeIcon icon={["fab", "twitter"]} color={blackColour} />
+              <FontAwesomeIcon icon={["fab", "youtube"]} color={blackColour} />
             </NewTabLink>
             <NewTabLink
               url={`https://www.linkedin.com/in/${site.siteMetadata.social.linkedin}`}

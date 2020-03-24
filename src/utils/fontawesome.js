@@ -3,7 +3,8 @@ import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { 
     faTwitter, 
     faLinkedin, 
-    faGithub
+    faGithub,
+    faYoutube
 } from "@fortawesome/free-brands-svg-icons";
 
-library.add(faMapMarkerAlt, faTwitter, faLinkedin, faGithub);
+library.add(faMapMarkerAlt, faTwitter, faLinkedin, faGithub, faYoutube);

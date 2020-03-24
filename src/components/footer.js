@@ -29,6 +29,7 @@ const Footer = () => {
                         github
                         linkedin
                         twitter
+                        youtube
                     }
                 }
             }
@@ -39,7 +40,7 @@ const Footer = () => {
         <Wrapper>
             <P>{site.siteMetadata.author} | <SocialMedia 
                 github={site.siteMetadata.social.github}
-                twitter={site.siteMetadata.social.twitter}
+                youtube={site.siteMetadata.social.youtube}
                 linkedin={site.siteMetadata.social.linkedin}
             /></P>
         </Wrapper>

@@ -15,12 +15,13 @@ const LinkWrapper = styled.a`
 `;
 
 const NewTabLink = ({ children, url }) => (
-    <LinkWrapper href={url}>
+    <LinkWrapper href={url} target="_blank">
         {children}
     </LinkWrapper>
 );
 
-const SocialMedia = ({ github, twitter, linkedin }) => (
+// TODO: after dissertation, consider whether you want to share twitter info.
+const SocialMedia = ({ github, twitter, linkedin, youtube }) => (
     <>
         <NewTabLink
             url={`https://github.com/${github}`}
@@ -28,9 +29,9 @@ const SocialMedia = ({ github, twitter, linkedin }) => (
             <FontAwesomeIcon icon={["fab", "github"]} color={blackColour} />
         </NewTabLink>
         <NewTabLink
-            url={`https://twitter.com/${twitter}`}
+            url={`https://www.youtube.com/channel/${youtube}`}
         >
-            <FontAwesomeIcon icon={["fab", "twitter"]} color={blackColour} />
+            <FontAwesomeIcon icon={["fab", "youtube"]} color={blackColour} />
         </NewTabLink>
         <NewTabLink
             url={`https://www.linkedin.com/in/${linkedin}`}

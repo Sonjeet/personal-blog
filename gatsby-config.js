@@ -12,6 +12,7 @@ module.exports = {
       twitter: `sonj_98`,
       github: "sonjeet",
       linkedin: "sonjeet",
+      youtube: "UCMFpLCg1s1GtdBLGri_XgNQ"
     },
     slogan: {
       italics: "sharing my thoughts",
