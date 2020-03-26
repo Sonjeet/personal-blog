@@ -18,6 +18,8 @@ to create blogs.
 ## Design
 Before developing the blog, I chose to create a high fidelity wireframe of the main pages. It's worth noting that I struggled with time to add a mobile design as my dissertation was occupying the majority of my time. If anyone is interested in looking at the wireframes then click [here](https://drive.google.com/file/d/1_0xHsGMYn01sBZWdxk96Olxu1CJMjZIK/view?usp=sharing).
 
+It's worth noting that the design was created a few weeks before I started development. By the time I started to develop things, I had some brief changes in mind in terms of how the design should be.
+
 ## Socials
 - Twitter: [@sonj_98](https://twitter.com/sonj_98)
 - LinkedIn: [@sonjeet](https://www.linkedin.com/in/sonjeet/)
