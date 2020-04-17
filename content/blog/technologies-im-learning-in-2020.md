@@ -2,7 +2,7 @@
 path: tech-im-learning-in-2020
 date: 2020-04-17T02:23:43.124Z
 title: Technologies I'm Learning in 2020
-description: Life's getting too busy so I'm carefully choosing what I learn now
+description: So much tech. Which ones to learn?
 ---
 # TLDR;
 
