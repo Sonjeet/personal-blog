@@ -31,7 +31,7 @@ const ComingSoon = ({ page }) => (
           color: "var(--blue-heading)",
         }}
       >
-        Please bare with me on this. I'm not sure how this page should be
+        Please bear with me on this. I'm not sure how this page should be
         designed/what content I should put here. Things that I could be busy
         with right now are:
       </p>
