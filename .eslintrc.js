@@ -1,11 +1,17 @@
 module.exports = {
-    globals: {
-        __PATH_PREFIX__: true,
-    },
-    extends: ['react-app', 'eslint:recommended', 'plugin:prettier/recommended'],
-    rules: {
-        quotes: ['error', 'single'],
-    },
-}
-
-//
+  parser: '@typescript-eslint/parser',
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+    'prettier/@typescript-eslint',
+  ],
+  plugins: ['@typescript-eslint'],
+  parserOptions: {
+    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+    sourceType: 'module', // Allows for the use of imports
+  },
+  env: {
+    browser: true,
+    node: true,
+  },
+};
