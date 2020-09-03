@@ -1,0 +1,11 @@
+@import '../assets/scss/variables.scss';
+@import '../assets/scss/mixins.scss';
+
+.test {
+  color: $red;
+
+  @include min-device('tablet') {
+    color: blue;
+  }
+}
+

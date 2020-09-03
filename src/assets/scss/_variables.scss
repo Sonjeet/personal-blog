@@ -1,0 +1,25 @@
+// Colors
+$color-blue: #488ac5;
+$color-blue-heaviest: #006290;
+$color-blue-heavy: #285c7f;
+$color-blue-light: #cce2f3;
+$color-blue-lightest: rgba(228, 238, 245, 0.93);
+
+$color-green: #31a178;
+$color-green-light: #e3f5eb;
+$color-green-lightest: rgba(171, 202, 192, 0.37);
+
+$link-primary-color: $color-blue-heaviest;
+$link-secondary-color: $color-green;
+
+$heading-color: $color-blue;
+
+$text-primary-color: $color-blue-heavy;
+$text-secondary-color: $color-blue;
+
+$card-primary-background-color: $color-blue-lightest;
+$card-primary-border-color: $color-blue-light;
+$card-secondary-background-color: $color-green-lightest;
+$card-secondary-border-color: $color-green-light;
+
+// TODO: typography
