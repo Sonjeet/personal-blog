@@ -2,10 +2,10 @@
 @import '../assets/scss/mixins.scss';
 
 .test {
-  color: $red;
+  color: $color-blue;
 
-  @include min-device('tablet') {
-    color: blue;
-  }
+  //@include min-device('tablet') {
+    //color: blue;
+  //}
 }
 

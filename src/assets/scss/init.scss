@@ -1,3 +1,38 @@
-@charset 'UTF-8';
+/**
+  * Initialising global styles
+*/
 @import 'variables';
-@import 'mixins'
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// TODO:
+// set a font face for connection serif here or in the variables partial
+:root {
+  font-size: 16px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: $color-green-light;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $color-green;
+}
+
+::selection {
+    background: $color-green;
+    color: white;
+}
+
+::-moz-selection {
+    background: $color-green;
+    color: white;
+}

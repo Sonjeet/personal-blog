@@ -1,0 +1,9 @@
+$spacing-horizontal-unit: 100vw / 12; // change to 8vw in case vw is not a reactive unit in sass's precompiled tings
+
+.layout {
+  margin: 0 $spacing-horizontal-unit;
+
+  &__content {
+    min-height: calc(100vh - 10rem)
+  }
+}
