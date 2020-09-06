@@ -1,3 +1,6 @@
+/* Noto sans */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
 // Colors
 $color-blue: #488ac5;
 $color-blue-heaviest: #006290;
@@ -24,5 +27,5 @@ $card-secondary-border-color: $color-green-light;
 
 // Typography
 $font-serif: 'Lora';
-$font-sans-serif: 'Noto Sans';
+$font-sans-serif: 'Noto Sans', sans-serif;
 // TODO: $font-pixelated: 'Connection Serif'

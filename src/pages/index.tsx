@@ -4,9 +4,7 @@ import * as React from 'react';
 import styles from './index.module.scss';
 
 import Layout from '../components/Layout';
-import NavLink from '../components/NavLink';
-import Navbar from '../components/Navbar';
-const msg: String = 'Hello Everyone';
+import Intro from '../components/Intro';
 
 export default function () {
   //Index will have:
@@ -14,7 +12,7 @@ export default function () {
   //Layout's children will be the different sections of the home page
   return (
     <Layout>
-      <div>hey this be a heading</div>
+      <Intro />
     </Layout>
   );
 }

@@ -1,9 +1,11 @@
 $spacing-horizontal-unit: 100vw / 12; // change to 8vw in case vw is not a reactive unit in sass's precompiled tings
 
 .layout {
-  margin: 0 $spacing-horizontal-unit;
+  padding: 0 1.5rem;
 
+  // TODO: dont need this line after main content is put in, we'll need media queries
+  // for when we need to actually set min height for desktop viewports
   &__content {
-    min-height: calc(100vh - 10rem)
+    min-height: calc(100vh - 10rem);
   }
 }

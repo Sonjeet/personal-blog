@@ -1,0 +1,48 @@
+@import '../../assets/scss/variables';
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $font-sans-serif;
+
+  > * {
+    margin-bottom: 1.4rem;
+  }
+
+  p {
+    color: $color-blue-heavy;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  &__author {
+    span {
+      margin-left: 0.6rem;
+    }
+  }
+
+  &__details {
+    font-size: 1.1rem;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      margin-left: 0.3rem;
+    }
+  }
+
+  &__socials {
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+
+    > * {
+      margin: 0 0.7rem;
+    }
+  }
+}

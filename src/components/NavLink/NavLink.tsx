@@ -11,7 +11,7 @@ const NavLink: FunctionComponent<NavLinkProps> = ({
   children,
 }) => {
   return (
-    <Link className={styles.navlink} to={`/${destination}`}>
+    <Link className={styles.navlink} to={destination}>
       {children}
     </Link>
   );

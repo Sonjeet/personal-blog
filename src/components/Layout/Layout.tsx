@@ -7,7 +7,7 @@ import Footer from '../Footer';
 //location: string;
 //}
 
-// TODO: add footer to the bottom
+// TODO:
 // background of content should be based on whether it's homepage or not
 // e.g. home page should be transparent background so we can still see the particles
 // but on the blog pages, particles can get distracting if you're trying to read

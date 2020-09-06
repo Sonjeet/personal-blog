@@ -11,11 +11,12 @@
   text-decoration: none;
   font-weight: 800;
   text-rendering: optimizeLegibility;
+  margin-bottom: 1rem;
 
   &__left > * {
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
   &__right > * {
-      margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
