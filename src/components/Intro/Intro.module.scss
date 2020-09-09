@@ -1,24 +1,22 @@
 @import '../../assets/scss/variables';
 
 .intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-items: center;
   font-family: $font-sans-serif;
-
-  > * {
-    margin-bottom: 1.4rem;
-  }
+  grid-row-gap: 1.1rem;
 
   p {
     color: $color-blue-heavy;
     font-size: 0.9rem;
     text-align: center;
+    margin: 0;
   }
 
   &__author {
     span {
-      margin-left: 0.6rem;
+      margin-left: 0.4rem;
+      // TODO: maybe add a transition to the wave on load?
     }
   }
 
@@ -31,6 +29,7 @@
     align-items: center;
 
     h3 {
+      font-weight: 500;
       margin-left: 0.3rem;
     }
   }

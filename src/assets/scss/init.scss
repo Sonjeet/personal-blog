@@ -22,6 +22,7 @@ h4,
 h5,
 h6 {
   color: $heading-color;
+  font-family: $font-sans-serif;
 }
 body::-webkit-scrollbar {
   width: 0.25rem;

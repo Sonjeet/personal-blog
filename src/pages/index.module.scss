@@ -1,11 +1,7 @@
 @import '../assets/scss/variables.scss';
 @import '../assets/scss/mixins.scss';
 
-.test {
-  color: $color-blue;
-
-  //@include min-device('tablet') {
-    //color: blue;
-  //}
+.container {
+  display: grid;
+  grid-row-gap: 2rem;
 }
-

@@ -27,13 +27,13 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-feed-mdx',
-    //{
-    //resolve: 'gatsby-source-filesystem',
-    //options: {
-    //path: `${__dirname}/src/images`,
-    //name: 'images',
-    //},
-    //},
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/assets/images`,
+        name: 'images',
+      },
+    },
     //{
     //resolve: 'gatsby-source-filesystem',
     //options: {

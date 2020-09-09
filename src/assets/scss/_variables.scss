@@ -25,6 +25,13 @@ $card-primary-border-color: $color-blue-light;
 $card-secondary-background-color: $color-green-lightest;
 $card-secondary-border-color: $color-green-light;
 
+$box-shadow-regular: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$box-shadow-light: 0 36px 35px -10px rgba(0, 94, 138, 0.02),
+  12px 22px 28px -12px rgba(0, 64, 97, 0.01),
+  0 32px 26px 3px hsla(0, 0%, 52.2%, 0.01),
+  0 9px 7px -4px rgba(230, 238, 231, 0.27);
+$text-shadow: 0px 5px 10px #00000014;
+
 // Typography
 $font-serif: 'Lora';
 $font-sans-serif: 'Noto Sans', sans-serif;
