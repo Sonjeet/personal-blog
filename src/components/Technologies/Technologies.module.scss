@@ -11,18 +11,17 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1.5rem;
-    grid-row-gap: 1.5rem;
+    grid-gap: 1rem;
   }
 
   &__tile {
     background-color: $card-primary-background-color;
     border: 0.1rem solid $card-primary-border-color;
+    box-shadow: $box-shadow-regular;
     padding: 0.8rem;
     transition: all 0.2s linear 0s;
     &:hover {
       z-index: 2;
-      box-shadow: $box-shadow-light;
       transform: scale(1.3);
       background-color: $card-secondary-background-color;
       border-color: $card-secondary-border-color;

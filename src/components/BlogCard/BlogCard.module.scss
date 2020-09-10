@@ -1,0 +1,40 @@
+@import '../../assets/scss/variables';
+
+.card {
+  text-decoration: none;
+  background-color: $card-primary-background-color;
+  border: 0.1rem solid $card-primary-border-color;
+  box-shadow: $box-shadow-regular;
+  width: 100%;
+  padding: 1rem;
+  transition: border-color 75ms ease, box-shadow 150ms ease, transform 0.2s ease,
+    background-color 125ms ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $card-secondary-border-color;
+    background-color: $card-secondary-background-color;
+    //box-shadow: $box-shadow-light;
+  }
+
+  &__container {
+    display: grid;
+    grid-gap: 0.7rem;
+    cursor: pointer;
+  }
+
+  &__heading {
+    color: $color-blue-heavy;
+  }
+
+  &__date {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.25rem;
+  }
+
+  &__introduction {
+    font-family: $font-serif;
+    color: $color-blue-heavy;
+  }
+}

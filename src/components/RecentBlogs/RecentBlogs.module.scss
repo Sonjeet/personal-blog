@@ -1,0 +1,11 @@
+.blogs {
+  display: grid;
+  justify-items: center;
+  grid-gap: 1.2rem;
+
+  &__heading {
+    span {
+      margin-left: 0.4rem;
+    }
+  }
+}
