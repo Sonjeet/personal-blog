@@ -41,7 +41,12 @@ const Technologies: FunctionComponent = () => {
 
   return (
     <div className={styles.technologies}>
-      <h2 className={styles.technologies__heading}>Technologies I use</h2>
+      <h2 className={styles.technologies__heading}>
+        Technologies I <strike>use</strike>
+        <span role="img" aria-label="heart">
+          &#x1F49A;
+        </span>
+      </h2>
       <div className={styles.technologies__grid}>
         {allImages.map((image) => (
           <div className={styles.technologies__tile} key={image.node.fluid.src}>

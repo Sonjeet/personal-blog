@@ -1,11 +1,61 @@
-$spacing-horizontal-unit: 100vw / 12; // change to 8vw in case vw is not a reactive unit in sass's precompiled tings
+@import '../../assets/scss/variables';
+
+@mixin color-change {
+  color: $color-green;
+  text-shadow: $text-shadow;
+}
 
 .layout {
   padding: 0 1.5rem;
+  display: grid;
 
-  // TODO: dont need this line after main content is put in, we'll need media queries
-  // for when we need to actually set min height for desktop viewports
+  &__navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    color: $link-primary-color;
+    font-family: $font-sans-serif;
+    text-decoration: none;
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+    transition: all 0.2s linear 0s;
+
+    div:nth-child(1) {
+      justify-self: start;
+
+      a {
+        margin-right: 1rem;
+
+        &:hover {
+          @include color-change;
+        }
+      }
+    }
+
+    div:nth-child(2) {
+      justify-self: end;
+      a {
+        margin-left: 1rem;
+
+        &:hover {
+          @include color-change;
+        }
+      }
+    }
+  }
+
   &__content {
-    min-height: calc(100vh - 10rem);
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    font-weight: 400;
+    font-family: $font-sans-serif;
+    color: $color-blue-heavy;
   }
 }

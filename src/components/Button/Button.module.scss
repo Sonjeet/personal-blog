@@ -1,0 +1,24 @@
+@import '../../assets/scss/variables';
+
+.button {
+  background-color: transparent;
+  font-size: 1.1rem;
+  padding: 0 0.7rem;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: 0.16rem solid $color-blue;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: $color-blue-heavy;
+  font-family: $font-sans-serif;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s linear 0s;
+
+  &:hover {
+    border-color: $color-green;
+    color: $color-green;
+    text-shadow: $text-shadow;
+    box-shadow: $box-shadow-light;
+    transform: translateY(-0.1rem);
+  }
+}

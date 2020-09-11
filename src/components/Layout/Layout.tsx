@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react';
 import Navbar from '../Navbar';
 import styles from './Layout.module.scss';
 import Footer from '../Footer';
+import NavLink from '../NavLink';
 
 //interface LayoutProps {
 //location: string;
@@ -13,9 +14,19 @@ import Footer from '../Footer';
 // but on the blog pages, particles can get distracting if you're trying to read
 const Layout: FunctionComponent = ({ children }) => (
   <div className={styles.layout}>
-    <Navbar />
+    <nav className={styles.layout__navbar}>
+      <div>
+        <NavLink destination="/">Sonj.</NavLink>
+      </div>
+      <div>
+        <NavLink destination="/">Blog</NavLink>
+        <NavLink destination="/">Contact</NavLink>
+      </div>
+    </nav>
     <main className={styles.layout__content}>{children}</main>
-    <Footer />
+    <footer className={styles.layout__footer}>
+      Sonjeet Paul &copy; {new Date().getFullYear()}
+    </footer>
   </div>
 );
 

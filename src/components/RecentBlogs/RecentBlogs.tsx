@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 import BlogCard from '../BlogCard';
 import Anchor from '../Anchor';
 import { BlogNode } from '../../types';
+import Button from '../Button';
+import NavLink from '../NavLink';
 
 interface BlogData {
   site: {
@@ -104,7 +106,7 @@ const RecentBlogs: FunctionComponent = () => {
           &#128064;
         </span>
       </h2>
-      {posts.map(post => (
+      {posts.map((post) => (
         <BlogCard
           key={post.node.fields.slug}
           slug={post.node.fields.slug}
@@ -113,6 +115,9 @@ const RecentBlogs: FunctionComponent = () => {
           intro={post.node.frontmatter.description}
         />
       ))}
+      <NavLink destination="/blog">
+        <Button>Read More</Button>
+      </NavLink>
     </div>
   );
 };
