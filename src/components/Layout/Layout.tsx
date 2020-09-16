@@ -1,13 +1,6 @@
 import React, { FunctionComponent } from 'react';
-import Navbar from '../Navbar';
 import styles from './Layout.module.scss';
-import Footer from '../Footer';
 import NavLink from '../NavLink';
-
-//interface LayoutProps {
-//location: string;
-//}
-
 // TODO:
 // background of content should be based on whether it's homepage or not
 // e.g. home page should be transparent background so we can still see the particles

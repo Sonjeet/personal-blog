@@ -1,19 +1,30 @@
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
 
 .intro {
   display: grid;
   justify-items: center;
   font-family: $font-sans-serif;
-  grid-row-gap: 1.1rem;
+
+  > * {
+    margin-bottom: 1.1rem;
+    &:nth-last-child(1) {
+      margin: 0;
+    }
+  }
 
   p {
     color: $color-blue-heavy;
-    font-size: 0.9rem;
+    font-size: 0.86rem;
     text-align: center;
-    margin: 0;
   }
 
-  &__author {
+  &__slogan {
+    font-family: 'Connection Serif';
+    font-weight: 900;
+  }
+
+  &__heading {
     span {
       margin-left: 0.4rem;
       // TODO: maybe add a transition to the wave on load?
@@ -42,6 +53,20 @@
 
     > * {
       margin: 0 0.7rem;
+      transition: all 0.2s linear 0s;
+
+      &:hover {
+        transform: translateY(-0.1rem);
+      }
     }
+  }
+
+  /* Media Queries */
+  @include min-device('desktop') {
+    //grid-area: intro;
+    grid-auto-rows: min-content;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 100%;
   }
 }

@@ -4,4 +4,15 @@
 .container {
   display: grid;
   grid-row-gap: 2.4rem;
+
+  @include min-device('desktop') {
+    height: calc(100vh - 10rem);
+    grid-template-columns: 5fr 4fr;
+    grid-template-rows: 35% 55%;
+    grid-column-gap: calc(100vw / 12);
+    grid-row-gap: 0;
+    //grid-template-areas:
+    //'intro blogs'
+    //'technologies blogs';
+  }
 }

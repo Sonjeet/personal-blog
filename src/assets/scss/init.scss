@@ -2,6 +2,19 @@
   * Initialising global styles
 */
 @import 'variables';
+@import 'mixins';
+
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+@font-face {
+  font-family: 'Connection Serif';
+  src: url('../fonts/connection-serif/ConnectionSerif.eot') format('eot'),
+    url('../fonts/connection-serif/ConnectionSerif.woff') format('woff'),
+    url('../fonts/connection-serif/ConnectionSerif.ttf') format('truetype'),
+    url('../fonts/connection-serif/ConnectionSerif.svg#ConnectionSerif')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 * {
   padding: 0;
@@ -9,10 +22,12 @@
   box-sizing: border-box;
 }
 
-// TODO:
-// set a font face for connection serif here or in the variables partial
 :root {
   font-size: 16px;
+
+  @include min-device('tablet') {
+    font-size: 20px;
+  }
 }
 
 h1,

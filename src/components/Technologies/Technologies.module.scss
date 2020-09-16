@@ -1,11 +1,13 @@
-// technologies styles
 @import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
 .technologies {
   display: grid;
 
   &__heading {
     margin-bottom: 1.2rem;
     justify-self: center;
+    grid-column: 1 / -1;
 
     span {
       margin-left: 0.4rem;
@@ -17,9 +19,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
+
+    //@include min-device('phone') {
+    //grid-gap: 1.4rem;
+    //}
+
+    @include min-device('desktop') {
+      grid-template-columns: repeat(5, 1fr);
+    }
   }
 
   &__tile {
+    width: 100%;
+    height: 100%;
     background-color: $card-primary-background-color;
     border: 0.1rem solid $card-primary-border-color;
     box-shadow: $box-shadow-regular;
@@ -31,5 +43,11 @@
       background-color: $card-secondary-background-color;
       border-color: $card-secondary-border-color;
     }
+  }
+
+  /* Media Queries */
+  @include min-device('desktop') {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
 }

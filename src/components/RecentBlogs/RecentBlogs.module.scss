@@ -1,3 +1,5 @@
+@import '../../assets/scss/mixins';
+
 .blogs {
   display: grid;
   justify-items: center;
@@ -7,5 +9,10 @@
     span {
       margin-left: 0.4rem;
     }
+  }
+
+  @include min-device {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
   }
 }

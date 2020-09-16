@@ -7,10 +7,7 @@ import Intro from '../components/Intro';
 import Technologies from '../components/Technologies';
 import RecentBlogs from '../components/RecentBlogs';
 
-export default function() {
-  //Index will have:
-  //Layout component
-  //Layout's children will be the different sections of the home page
+export default function () {
   return (
     <Layout>
       <div className={styles.container}>

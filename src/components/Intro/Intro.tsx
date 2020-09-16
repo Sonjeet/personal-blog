@@ -32,7 +32,7 @@ const Intro: FunctionComponent = () => {
 
   return (
     <div className={styles.intro}>
-      <h1 className={styles.intro__author}>
+      <h1 className={styles.intro__heading}>
         {siteMetadata.author}
         <span role="img" aria-label="introductory wave">
           &#128075;
@@ -61,7 +61,10 @@ const Intro: FunctionComponent = () => {
           </Anchor>
         </div>
       </div>
-      <p>{siteMetadata.description}</p>
+      <p>
+        {siteMetadata.description}{' '}
+        <span className={styles.intro__slogan}>bit by bit</span>
+      </p>
     </div>
   );
 };
