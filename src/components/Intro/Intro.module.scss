@@ -2,8 +2,9 @@
 @import '../../assets/scss/mixins';
 
 .intro {
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: $font-sans-serif;
 
   > * {
@@ -15,8 +16,9 @@
 
   p {
     color: $color-blue-heavy;
-    font-size: 0.86rem;
-    text-align: center;
+    text-align: justify;
+    // TODO: test how the justified text looks on different devices
+    text-justify: inter-character;
   }
 
   &__slogan {
@@ -33,6 +35,11 @@
 
   &__details {
     font-size: 1.1rem;
+    color: $color-blue-heavy;
+
+    @include min-device('tablet') {
+      display: flex;
+    }
   }
 
   &__location {
@@ -43,13 +50,20 @@
       font-weight: 500;
       margin-left: 0.3rem;
     }
+
+    @include min-device('tablet') {
+      &:after {
+        padding-left: 0.4rem;
+        content: ' | ';
+      }
+    }
   }
 
   &__socials {
-    margin-top: 0.3rem;
     display: flex;
     justify-content: center;
     font-size: 1.3rem;
+    margin-top: 0.3rem;
 
     > * {
       margin: 0 0.7rem;
@@ -59,14 +73,14 @@
         transform: translateY(-0.1rem);
       }
     }
+
+    @include min-device('tablet') {
+      align-items: flex-start;
+      margin-top: 0;
+    }
   }
 
-  /* Media Queries */
-  @include min-device('desktop') {
-    //grid-area: intro;
-    grid-auto-rows: min-content;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    height: 100%;
+  @include min-device('desktop-large') {
+    align-items: flex-start;
   }
 }

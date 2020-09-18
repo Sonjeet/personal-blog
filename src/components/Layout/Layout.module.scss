@@ -8,11 +8,9 @@
 
 .layout {
   padding: 0 calc(100vw / 12);
-  display: grid;
 
   &__navbar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     align-items: center;
     width: 100%;
     height: 5rem;
@@ -24,7 +22,7 @@
     transition: all 0.2s linear 0s;
 
     div:nth-child(1) {
-      justify-self: start;
+      margin-right: auto;
 
       a {
         margin-right: 1rem;
@@ -36,7 +34,8 @@
     }
 
     div:nth-child(2) {
-      justify-self: end;
+      margin-left: auto;
+
       a {
         margin-left: 1rem;
 
@@ -46,8 +45,13 @@
       }
     }
   }
-
-  &__content {
+  &__homecontent {
+    @include min-device('desktop-large') {
+      // height is the height of the navbar & footer subtracted from the full viewport height
+      height: calc(100vh - 10rem);
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__footer {
@@ -59,5 +63,10 @@
     font-weight: 400;
     font-family: $font-sans-serif;
     color: $color-blue-heavy;
+  }
+
+  @include min-device('desktop-large') {
+    height: 100vh;
+    max-height: 100vh;
   }
 }

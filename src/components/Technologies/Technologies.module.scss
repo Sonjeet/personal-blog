@@ -2,12 +2,12 @@
 @import '../../assets/scss/mixins';
 
 .technologies {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__heading {
     margin-bottom: 1.2rem;
-    justify-self: center;
-    grid-column: 1 / -1;
 
     span {
       margin-left: 0.4rem;
@@ -15,26 +15,19 @@
   }
 
   &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-
-    //@include min-device('phone') {
-    //grid-gap: 1.4rem;
-    //}
-
-    @include min-device('desktop') {
-      grid-template-columns: repeat(5, 1fr);
-    }
   }
 
   &__tile {
-    width: 100%;
-    height: 100%;
+    $tile-width: calc((100% / 3) - 0.5rem);
+    width: $tile-width;
     background-color: $card-primary-background-color;
     border: 0.1rem solid $card-primary-border-color;
     box-shadow: $box-shadow-regular;
+    margin-bottom: 1rem;
     padding: 0.8rem;
     transition: all 0.2s linear 0s;
     &:hover {
@@ -43,11 +36,19 @@
       background-color: $card-secondary-background-color;
       border-color: $card-secondary-border-color;
     }
+
+    @include min-device('tablet') {
+      width: calc((100% / 5) - 0.5rem);
+    }
+
+    @include min-device('desktop-large') {
+      width: calc((100% / 5) - 0.2rem);
+      padding: 0.3rem;
+      margin-bottom: 0.4rem;
+    }
   }
 
-  /* Media Queries */
-  @include min-device('desktop') {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+  @include min-device('desktop-large') {
+    align-items: flex-start;
   }
 }

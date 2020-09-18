@@ -107,13 +107,14 @@ const RecentBlogs: FunctionComponent = () => {
         </span>
       </h2>
       {posts.map((post) => (
-        <BlogCard
-          key={post.node.fields.slug}
-          slug={post.node.fields.slug}
-          title={post.node.frontmatter.title}
-          date={post.node.frontmatter.date}
-          intro={post.node.frontmatter.description}
-        />
+        <div className={styles.blogs__card} key={post.node.fields.slug}>
+          <BlogCard
+            slug={post.node.fields.slug}
+            title={post.node.frontmatter.title}
+            date={post.node.frontmatter.date}
+            intro={post.node.frontmatter.description}
+          />
+        </div>
       ))}
       <NavLink destination="/blog">
         <Button>Read More</Button>

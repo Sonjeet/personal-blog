@@ -1,14 +1,21 @@
 @import '../../assets/scss/mixins';
 
 .blogs {
-  display: grid;
-  justify-items: center;
-  grid-gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__heading {
+    margin-bottom: 1.2rem;
+
     span {
       margin-left: 0.4rem;
     }
+  }
+
+  &__card {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   @include min-device {

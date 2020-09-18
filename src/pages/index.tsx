@@ -9,11 +9,15 @@ import RecentBlogs from '../components/RecentBlogs';
 
 export default function () {
   return (
-    <Layout>
+    <Layout page="home">
       <div className={styles.container}>
-        <Intro />
-        <Technologies />
-        <RecentBlogs />
+        <div>
+          <Intro />
+          <Technologies />
+        </div>
+        <div>
+          <RecentBlogs />
+        </div>
       </div>
     </Layout>
   );

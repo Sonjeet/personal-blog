@@ -1,6 +1,7 @@
 @import '../../assets/scss/variables';
 
 .card {
+  display: block;
   text-decoration: none;
   background-color: $card-primary-background-color;
   border: 0.1rem solid $card-primary-border-color;
@@ -18,8 +19,6 @@
   }
 
   &__container {
-    display: grid;
-    grid-gap: 0.7rem;
     cursor: pointer;
   }
 
