@@ -47,6 +47,11 @@ h6 {
   color: $heading-color;
   font-family: $font-sans-serif;
 }
+
+a {
+  transition: all 0.2s linear 0s;
+}
+
 body::-webkit-scrollbar {
   width: 0.25rem;
 }

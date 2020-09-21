@@ -8,6 +8,7 @@ import NavLink from '../NavLink';
 
 interface LayoutProps {
   page: string;
+  location: string;
 }
 
 const Layout: FunctionComponent<LayoutProps> = ({ children, page }) => (
@@ -17,7 +18,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children, page }) => (
         <NavLink destination="/">Sonj.</NavLink>
       </div>
       <div>
-        <NavLink destination="/">Blog</NavLink>
+        <NavLink destination="/blog">Blog</NavLink>
         <NavLink destination="/">Contact</NavLink>
       </div>
     </nav>

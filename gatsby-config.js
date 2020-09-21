@@ -20,13 +20,14 @@ module.exports = {
     },
   },
   plugins: [
-    //'gatsby-plugin-netlify-cms', TODO: configure the ting when you sort out the other shit
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-sass',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-feed-mdx',
+    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -34,13 +35,13 @@ module.exports = {
         name: 'images',
       },
     },
-    //{
-    //resolve: 'gatsby-source-filesystem',
-    //options: {
-    //path: `${__dirname}/content/blog`,
-    //name: 'blog',
-    //},
-    //},
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: 'blog',
+      },
+    },
     //{
     //resolve: 'gatsby-source-filesystem',
     //options: {

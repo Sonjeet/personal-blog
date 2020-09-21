@@ -18,7 +18,7 @@ const BlogCard: FunctionComponent<BlogCardProps> = ({
   <Link className={styles.card} to={`blog${slug}`}>
     <div className={styles.card__container}>
       <h3 className={styles.card__heading}>{title}</h3>
-      <h4 className={styles.card__date}>{date}</h4>
+      <h5 className={styles.card__date}>{date}</h5>
       <p className={styles.card__introduction}>{intro}</p>
     </div>
   </Link>

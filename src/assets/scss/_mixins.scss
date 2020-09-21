@@ -12,3 +12,8 @@ $devices: (
     }
   }
 }
+
+@mixin color-change {
+  color: $color-green;
+  text-shadow: $text-shadow;
+}
