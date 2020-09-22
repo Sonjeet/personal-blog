@@ -1,11 +1,6 @@
 @import '../../assets/scss/variables';
 @import '../../assets/scss/mixins';
 
-@mixin color-change {
-  color: $color-green;
-  text-shadow: $text-shadow;
-}
-
 .layout {
   &--home {
     padding: 0 calc(100vw / 12);

@@ -10,12 +10,16 @@ interface BlogTemplateProps {
   data: {
     markdownRemark: BlogNode;
   };
+  pageContext: {
+    next: BlogNode;
+    previous: BlogNode;
+  };
 }
 
 const BlogTemplate: FunctionComponent<BlogTemplateProps> = (props) => {
-  console.log('DATA FROM COMP,', props);
   const { markdownRemark } = props.data;
   const { frontmatter, html } = markdownRemark;
+  const { next, previous } = props.pageContext;
 
   return (
     <Layout page="blog">
@@ -33,6 +37,20 @@ const BlogTemplate: FunctionComponent<BlogTemplateProps> = (props) => {
           className={styles.blog__post}
           dangerouslySetInnerHTML={{ __html: html }}
         ></div>
+        <div className={styles.blog__navigation}>
+          {previous && (
+            <NavLink destination={`/${previous.frontmatter.path}`}>
+              <span className={styles['blog__navigationLarr']}>&larr;</span>
+              {previous.frontmatter.title}
+            </NavLink>
+          )}
+          {next && (
+            <NavLink destination={`/${next.frontmatter.path}`}>
+              {next.frontmatter.title}
+              <span className={styles['blog__navigationRarr']}>&rarr;</span>
+            </NavLink>
+          )}
+        </div>
       </div>
     </Layout>
   );
