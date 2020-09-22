@@ -47,7 +47,7 @@
   }
   &__homecontent {
     @include min-device('desktop-large') {
-      // height is the height of the navbar & footer subtracted from the full viewport height
+      // height of the container is the height of the navbar & footer subtracted from the full viewport height
       height: calc(100vh - 10rem);
       display: flex;
       align-items: center;
