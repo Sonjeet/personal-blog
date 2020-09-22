@@ -11,7 +11,11 @@ interface LayoutProps {
 }
 
 const Layout: FunctionComponent<LayoutProps> = ({ children, page }) => (
-  <div className={styles.layout}>
+  <div
+    className={`${styles.layout} ${
+      page === 'home' ? styles['layoutHome'] : styles['layoutBlog']
+    }`}
+  >
     <nav className={styles.layout__navbar}>
       <div>
         <NavLink destination="/">Sonj.</NavLink>

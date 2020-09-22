@@ -7,8 +7,17 @@
 }
 
 .layout {
-  padding: 0 calc(100vw / 12);
+  &--home {
+    padding: 0 calc(100vw / 12);
+  }
 
+  &--blog {
+    padding: 0 15px;
+
+    @include min-device('phone') {
+      padding: 0 calc(100vw / 12);
+    }
+  }
   &__navbar {
     display: flex;
     align-items: center;

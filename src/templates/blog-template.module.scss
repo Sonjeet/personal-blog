@@ -3,6 +3,15 @@
 
 .blog {
   margin: 2.6rem 0;
+  font-size: 20px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h4 {
+    font-weight: 400;
+    margin-top: 1rem;
+  }
 
   &__slantedrule {
     border: 1px solid $color-blue-lightest;
@@ -15,6 +24,47 @@
     &--upwards {
       transform: rotate(-2deg);
       margin-top: 1rem;
+    }
+  }
+
+  &__post {
+    @mixin txt-styles {
+      color: $color-blue-heavy;
+      text-align: justify;
+      text-justify: distribute;
+      line-height: 1.2em;
+    }
+
+    margin: 2.6rem 0;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol {
+      margin-bottom: 1.75rem;
+    }
+
+    p {
+      @include txt-styles;
+    }
+
+    ul,
+    ol {
+      @include txt-styles;
+      margin-left: 1em;
+    }
+
+    blockquote {
+      margin-left: 1em;
+    }
+
+    img {
+      max-width: 100%;
     }
   }
 }
