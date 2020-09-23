@@ -1,0 +1,11 @@
+.blogs {
+  margin-top: 2.6rem;
+  display: flex;
+  flex-direction: column;
+
+  &__card {
+    width: 100%;
+    height: calc(2 * (100vh / 12));
+    margin-bottom: 1rem;
+  }
+}

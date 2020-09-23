@@ -3,11 +3,15 @@
 
 .layout {
   &--home {
-    padding: 0 calc(100vw / 12);
+    padding: 0 1rem;
+
+    @include min-device('phone') {
+      padding: 0 calc(100vw / 12);
+    }
   }
 
   &--blog {
-    padding: 0 15px;
+    padding: 0 1rem;
 
     @include min-device('phone') {
       padding: 0 calc(100vw / 12);
