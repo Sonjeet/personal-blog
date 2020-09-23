@@ -53,12 +53,26 @@
       }
     }
   }
-  &__homecontent {
-    @include min-device('desktop-large') {
-      // height of the container is the height of the navbar & footer subtracted from the full viewport height
-      height: calc(100vh - 10rem);
-      display: flex;
-      align-items: center;
+
+  &__content {
+    &--home {
+      @include min-device('desktop-large') {
+        // height of the container is the height of the navbar & footer subtracted from the full viewport height
+        height: calc(100vh - 10rem);
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &--blogs {
+      @include min-device('desktop-large') {
+        // height of the container is the height of the navbar & footer subtracted from the full viewport height
+        height: calc(100vh - 10rem);
+      }
+    }
+
+    &--blog-post {
+      background-color: white;
     }
   }
 

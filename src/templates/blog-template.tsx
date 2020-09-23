@@ -22,7 +22,7 @@ const BlogTemplate: FunctionComponent<BlogTemplateProps> = (props) => {
   const { next, previous } = props.pageContext;
 
   return (
-    <Layout page="blog">
+    <Layout page="blog-post">
       <BlogHeading />
       <div className={styles.blog}>
         <hr

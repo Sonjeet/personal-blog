@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import styles from './Blog.module.scss';
-import { Link, graphql, PageProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import Layout from '../components/Layout';
 import BlogCard from '../components/BlogCard';
 import { BlogNode } from '../types';
@@ -15,7 +15,7 @@ interface DataProps {
 const Blog: FunctionComponent<PageProps<DataProps>> = ({ data }) => {
   const { nodes } = data.allMarkdownRemark;
   return (
-    <Layout page="blog">
+    <Layout page="blogs">
       <BlogHeading />
       <div className={styles.blogs}>
         {nodes.map((blogNode) => (

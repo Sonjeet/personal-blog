@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import styles from './Layout.module.scss';
 import NavLink from '../NavLink';
+import Particles from '../Particles';
 // TODO:
 // background of content should be based on whether it's homepage or not
 // e.g. home page should be transparent background so we can still see the particles
@@ -10,28 +11,48 @@ interface LayoutProps {
   page: string;
 }
 
+const getLayoutClassName = (page: string): string => {
+  interface ClassNames {
+    [key: string]: string;
+  }
+
+  const bemElement = 'layout__content';
+  const classNames: ClassNames = {
+    home: `${bemElement}Home`,
+    blogs: `${bemElement}Blogs`,
+    'blog-post': `${bemElement}BlogPost`,
+  };
+
+  if (page.length === 0) {
+    return classNames['home'];
+  }
+
+  return classNames[page];
+};
+
 const Layout: FunctionComponent<LayoutProps> = ({ children, page }) => (
-  <div
-    className={`${styles.layout} ${
-      page === 'home' ? styles['layoutHome'] : styles['layoutBlog']
-    }`}
-  >
-    <nav className={styles.layout__navbar}>
-      <div>
-        <NavLink destination="/">Sonj.</NavLink>
-      </div>
-      <div>
-        <NavLink destination="/blog">Blog</NavLink>
-        <NavLink destination="/">Contact</NavLink>
-      </div>
-    </nav>
-    <main className={page === 'home' ? styles.layout__homecontent : ''}>
-      {children}
-    </main>
-    <footer className={styles.layout__footer}>
-      Sonjeet Paul &copy; {new Date().getFullYear()}
-    </footer>
-  </div>
+  <>
+    <Particles />
+    <div
+      className={`${styles.layout} ${
+        page === 'home' ? styles['layoutHome'] : styles['layoutBlog']
+      }`}
+    >
+      <nav className={styles.layout__navbar}>
+        <div>
+          <NavLink destination="/">Sonj.</NavLink>
+        </div>
+        <div>
+          <NavLink destination="/blog">Blog</NavLink>
+          <NavLink destination="/">Contact</NavLink>
+        </div>
+      </nav>
+      <main className={styles[getLayoutClassName(page)]}>{children}</main>
+      <footer className={styles.layout__footer}>
+        Sonjeet Paul &copy; {new Date().getFullYear()}
+      </footer>
+    </div>
+  </>
 );
 
 export default Layout;
