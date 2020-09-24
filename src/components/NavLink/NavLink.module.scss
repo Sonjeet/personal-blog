@@ -1,0 +1,8 @@
+@import '../../assets/scss/variables.scss';
+
+.navlink {
+  text-decoration: none;
+  color: $link-primary-color;
+  box-shadow: none;
+  transition: all 0.2s linear 0s;
+}

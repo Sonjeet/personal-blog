@@ -1,0 +1,29 @@
+@import '../assets/scss/variables.scss';
+@import '../assets/scss/mixins.scss';
+
+.container {
+  > div:nth-child(1) {
+    > div {
+      margin-bottom: 3rem;
+    }
+  }
+
+  @include min-device('desktop-large') {
+    display: flex;
+    justify-content: space-between;
+
+    // left column of desktop layout
+    > div:nth-child(1) {
+      width: 50%;
+
+      > div:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+
+    // right column of desktop layout
+    > div:nth-child(2) {
+      width: 40%;
+    }
+  }
+}

@@ -1,4 +1,5 @@
-# Personal Blog
+
+# Personal Blog [![Netlify Status](https://api.netlify.com/api/v1/badges/4904a628-52c7-416e-9f5c-0b624f17bd71/deploy-status)](https://app.netlify.com/sites/sonjblogs/deploys)
 
 ## Motivations
 
@@ -11,11 +12,7 @@ to create blogs.
 
 ## Pending features
 
-- Subscription / mailing list
-- Add a contact page
-- Add an about page
-- Implement a comments section using FaaS (similar to how Smashing Magazing have written their comments section logic)
-- Let me know of anything you think I should add by contacting me on the socials below and I can add it to my [roadmap](https://app.asana.com/0/1179372401033793/board)
+They're all listed in the github issues for this repo at the moment.
 
 ## Design
 
