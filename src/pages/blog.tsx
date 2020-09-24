@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import styles from './Blog.module.scss';
+import styles from './blog.module.scss';
 import { graphql, PageProps } from 'gatsby';
 import Layout from '../components/Layout';
 import BlogCard from '../components/BlogCard';
