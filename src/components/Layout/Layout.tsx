@@ -44,7 +44,12 @@ const Layout: FunctionComponent<LayoutProps> = ({ children, page }) => (
         </div>
         <div>
           <NavLink destination="/blog">Blog</NavLink>
-          <NavLink destination="/">Contact</NavLink>
+          <div className={styles.layout__navbarTooltip}>
+            <NavLink destination="/">Contact</NavLink>
+            <span className={styles.layout__navbarTooltipText}>
+              Contact page is a work in progress at the moment.
+            </span>
+          </div>
         </div>
       </nav>
       <main className={styles[getLayoutClassName(page)]}>{children}</main>

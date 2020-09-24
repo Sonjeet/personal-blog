@@ -43,6 +43,7 @@
 
     div:nth-child(2) {
       margin-left: auto;
+      display: flex;
 
       a {
         margin-left: 1rem;
@@ -51,6 +52,37 @@
           @include color-change;
         }
       }
+    }
+    &--tooltip {
+      position: relative;
+
+      &:hover &-text {
+        opacity: 0.8;
+        visibility: visible;
+      }
+
+      a {
+        cursor: not-allowed;
+        pointer-events: none;
+        &:hover {
+          color: $color-green-lightest !important;
+        }
+      }
+    }
+    &--tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      font-size: 15px;
+      position: absolute;
+      z-index: 1;
+      background-color: $color-blue-lightest;
+      color: $color-blue-heavy;
+      text-align: center;
+      border-radius: 0.28em;
+      padding: 0.4em 1em;
+      margin-top: 1.6rem;
+      width: calc(100vw / 8);
+      transition: opacity 0.5s;
     }
   }
 
