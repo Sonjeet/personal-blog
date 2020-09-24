@@ -21,6 +21,7 @@ const getLayoutClassName = (page: string): string => {
     home: `${bemElement}Home`,
     blogs: `${bemElement}Blogs`,
     'blog-post': `${bemElement}BlogPost`,
+    '404': `${bemElement}404`,
   };
 
   if (page.length === 0) {

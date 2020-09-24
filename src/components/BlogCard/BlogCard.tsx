@@ -15,7 +15,6 @@ const BlogCard: FunctionComponent<BlogCardProps> = ({
   date,
   intro,
 }) => {
-  console.log('slug', slug);
   return (
     <Link className={styles.card} to={`/${slug}`}>
       <div className={styles.card__container}>

@@ -26,7 +26,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-feed-mdx',
     'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
