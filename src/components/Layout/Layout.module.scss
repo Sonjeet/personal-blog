@@ -1,0 +1,133 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.layout {
+  &--home {
+    padding: 0 1rem;
+
+    @include min-device('phone') {
+      padding: 0 calc(100vw / 12);
+    }
+  }
+
+  &--blog {
+    padding: 0 1rem;
+
+    @include min-device('phone') {
+      padding: 0 calc(100vw / 12);
+    }
+  }
+  &__navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    color: $link-primary-color;
+    font-family: $font-sans-serif;
+    text-decoration: none;
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+    transition: all 0.2s linear 0s;
+
+    div:nth-child(1) {
+      margin-right: auto;
+
+      a {
+        margin-right: 1rem;
+
+        &:hover {
+          @include color-change;
+        }
+      }
+    }
+
+    div:nth-child(2) {
+      margin-left: auto;
+      display: flex;
+
+      a {
+        margin-left: 1rem;
+
+        &:hover {
+          @include color-change;
+        }
+      }
+    }
+    &--tooltip {
+      position: relative;
+
+      &:hover &-text {
+        opacity: 0.8;
+        visibility: visible;
+      }
+
+      a {
+        cursor: not-allowed;
+        pointer-events: none;
+        &:hover {
+          color: $color-green-lightest !important;
+        }
+      }
+    }
+    &--tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      font-size: 15px;
+      position: absolute;
+      z-index: 1;
+      background-color: $color-blue-lightest;
+      color: $color-blue-heavy;
+      text-align: center;
+      border-radius: 0.28em;
+      padding: 0.4em 1em;
+      margin-top: 1.6rem;
+      width: calc(100vw / 8);
+      transition: opacity 0.5s;
+    }
+  }
+
+  &__content {
+    &--home {
+      @include min-device('desktop-large') {
+        // height of the container is the height of the navbar & footer subtracted from the full viewport height
+        height: calc(100vh - 10rem);
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &--blogs {
+      @include min-device('desktop-large') {
+        // height of the container is the height of the navbar & footer subtracted from the full viewport height
+        height: calc(100vh - 10rem);
+      }
+    }
+
+    &--blog-post {
+      background-color: white;
+    }
+
+    &--404 {
+      height: calc(100vh - 10rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 5rem;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    font-family: $font-sans-serif;
+    color: $color-blue-heavy;
+  }
+
+  @include min-device('desktop-large') {
+    height: 100vh;
+    max-height: 100vh;
+  }
+}

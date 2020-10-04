@@ -1,0 +1,42 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.heading {
+  &__container {
+    width: 100%;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-blue-heavy;
+
+    //TODO: find out why adding the hover to the anchor is being overwritten by h1
+    // i.e. we should just be adding the hover styling to an anchor tag, not the h1
+    h1 {
+      transition: all 0.2s linear 0s;
+      &:hover {
+        @include color-change;
+      }
+    }
+  }
+
+  &__brand {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+
+    > span:nth-child(1) {
+      font-weight: 200;
+      font-style: italic;
+    }
+
+    > span:nth-child(2) {
+      font-family: 'Connection Serif';
+      font-weight: 500;
+
+      &:before {
+        content: ' ';
+      }
+    }
+  }
+}

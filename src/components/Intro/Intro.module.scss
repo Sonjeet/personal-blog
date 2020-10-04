@@ -1,0 +1,86 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $font-sans-serif;
+
+  > * {
+    margin-bottom: 1.1rem;
+    &:nth-last-child(1) {
+      margin: 0;
+    }
+  }
+
+  p {
+    color: $color-blue-heavy;
+    text-align: justify;
+    // TODO: test how the justified text looks on different devices
+    text-justify: inter-character;
+  }
+
+  &__slogan {
+    font-family: 'Connection Serif';
+    font-weight: 900;
+  }
+
+  &__heading {
+    span {
+      margin-left: 0.4rem;
+      // TODO: maybe add a transition to the wave on load?
+    }
+  }
+
+  &__details {
+    font-size: 1.1rem;
+    color: $color-blue-heavy;
+
+    @include min-device('tablet') {
+      display: flex;
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      font-weight: 500;
+      margin-left: 0.3rem;
+    }
+
+    @include min-device('tablet') {
+      &:after {
+        padding-left: 0.4rem;
+        content: ' | ';
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-top: 0.3rem;
+
+    > * {
+      margin: 0 0.7rem;
+      transition: all 0.2s linear 0s;
+
+      &:hover {
+        transform: translateY(-0.1rem);
+      }
+    }
+
+    @include min-device('tablet') {
+      align-items: flex-start;
+      margin-top: 0;
+    }
+  }
+
+  @include min-device('desktop-large') {
+    align-items: flex-start;
+  }
+}

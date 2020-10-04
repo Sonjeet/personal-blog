@@ -1,0 +1,75 @@
+/**
+  * Initialising global styles
+*/
+@import 'variables';
+@import 'mixins';
+
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+@font-face {
+  font-family: 'Connection Serif';
+  src: url('../fonts/connection-serif/ConnectionSerif.eot') format('eot'),
+    url('../fonts/connection-serif/ConnectionSerif.woff') format('woff'),
+    url('../fonts/connection-serif/ConnectionSerif.ttf') format('truetype'),
+    url('../fonts/connection-serif/ConnectionSerif.svg#ConnectionSerif')
+      format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+
+  @include min-device('phone') {
+    font-size: 20px;
+  }
+
+  @include min-device('tablet') {
+    font-size: 24px;
+  }
+
+  @include min-device('desktop-large') {
+    font-size: 22px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  font-family: $font-sans-serif;
+}
+
+a {
+  transition: all 0.2s linear 0s;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: $color-green-light;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $color-green;
+}
+
+::selection {
+  background: $color-green;
+  color: white;
+}
+
+::-moz-selection {
+  background: $color-green;
+  color: white;
+}

@@ -1,0 +1,37 @@
+/* Noto sans */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+// Colors
+$color-blue: #488ac5;
+$color-blue-heaviest: #006290;
+$color-blue-heavy: #3d4d73;
+$color-blue-light: #cce2f3;
+$color-blue-lightest: rgba(228, 238, 245, 0.93);
+
+$color-green: #31a178;
+$color-green-light: #e3f5eb;
+$color-green-lightest: rgba(171, 202, 192, 0.37);
+
+$link-primary-color: $color-blue-heaviest;
+$link-secondary-color: $color-green;
+
+$heading-color: $color-blue;
+
+$text-primary-color: $color-blue-heavy;
+$text-secondary-color: $color-blue;
+
+$card-primary-background-color: $color-blue-lightest;
+$card-primary-border-color: $color-blue-light;
+$card-secondary-background-color: $color-green-light;
+$card-secondary-border-color: $color-green-light;
+
+$box-shadow-regular: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$box-shadow-light: 0 36px 35px -10px rgba(0, 94, 138, 0.02),
+  12px 22px 28px -12px rgba(0, 64, 97, 0.01),
+  0 32px 26px 3px hsla(0, 0%, 52.2%, 0.01),
+  0 9px 7px -4px rgba(230, 238, 231, 0.27);
+$text-shadow: 0px 5px 10px #00000014;
+
+// Typography
+$font-serif: 'Lora';
+$font-sans-serif: 'Noto Sans', sans-serif;
