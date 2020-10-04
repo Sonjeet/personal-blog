@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: sonjeet/personal-blog
-  branch: gh2-tech-migration
+  branch: master
 
 media_folder: static/assets
 public_folder: /assets
