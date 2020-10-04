@@ -27,6 +27,7 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-remark',
+    'gatsby-plugin-fontawesome-css',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
